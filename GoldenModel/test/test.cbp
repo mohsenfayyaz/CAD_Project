@@ -33,7 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="ieee.cpp" />
-		<Unit filename="main.cpp" />
+		<Unit filename="single_divider.cpp" />
+		<Unit filename="single_sqrt.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

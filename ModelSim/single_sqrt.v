@@ -1,7 +1,9 @@
-//IEEE Floating Point SquareRoot (Single Precision)
-//Copyright (C) Mohsen Fayyaz 2019
+//IEEE Floating Point Square Root (Single Precision)
+//Copyright (C) Mohsen Fayyaz 2019 "mohsenfayyaz.ir"
 //2019-12-12
 //
+`include "defines.v"
+
 module sqrt(
         input_a,
         input_a_stb,
@@ -89,27 +91,9 @@ module sqrt(
     .output_z_stb(adder_z_stb),
     .output_z_ack(adder_z_ack));
     
-  function [31:0] single_pack_function;
-    input z_s;
-    input[9:0] z_e;
-    input[23:0] z_m;
-    begin
-      //if overflow occurs, return inf
-        if ($signed(z_e) > 127) begin
-         single_pack_function[22 : 0] = 0;
-         single_pack_function[30 : 23] = 255;
-         single_pack_function[31] = z_s;
-        end
-        else if ($signed(z_e) == -126 && z_m[23] == 0) begin
-          single_pack_function[30 : 23] = 0;
-          single_pack_function[22 : 0] = z_m[22:0];
-          single_pack_function[31] = z_s;
-        end else begin
-          single_pack_function[22 : 0] = z_m[22:0];
-          single_pack_function[30 : 23] = z_e[7:0] + 127;
-          single_pack_function[31] = z_s;
-        end
-    end
+  function [31:0] divide_exponent_function;
+    input[31:0] in;
+    divide_exponent_function = {in[31], ((in[30:23]-127) >> 1) + 127, in[22:0]};
   endfunction
 
   reg[31:0] sqrt_n, sqrt_n_new;
@@ -189,8 +173,8 @@ module sqrt(
       begin
         z_s <= a_s;
         z_e <= a_e >> 1; // a_e/2
-        //sqrt_n <= single_pack_function(a_s, a_e >> 1, a_m);  // a/2 as X0
-        sqrt_n <= a;
+        sqrt_n <= divide_exponent_function(a);  // a with half power of 2 as X0
+        //sqrt_n <= a;
         count <= 0;
         
         state <= sqrt_1;
@@ -225,8 +209,10 @@ module sqrt(
           adder_a_stb <= 0;
           adder_b_stb <= 0;
           adder_z_ack <= 1;
-          s_output_z <= sqrt_n;
-          if(count == 100 || sqrt_n == {adder_z[31], adder_z[30:23] - 1, adder_z[22:0]})
+          if(`DEBUGGING) 
+            s_output_z <= sqrt_n;  //Show results before finsihing calculation
+          
+          if(count == `SINGLE_SQRT_MAX_LOOP || sqrt_n == {adder_z[31], adder_z[30:23] - 1, adder_z[22:0]})
           begin
             z <= {adder_z[31], adder_z[30:23] - 1, adder_z[22:0]};
             state <= put_z;

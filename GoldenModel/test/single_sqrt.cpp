@@ -44,7 +44,7 @@ int main()
         stringstream ss(sample);
         ss >> in;
         ss >> out;
-        *(int*)&input = (int) bitset<64>(in).to_ulong();
+        *(int*)&input = (int) bitset<64>(in).to_ulong();  // & gets the pointer to input memory, (int*) casts the address to int* and * at last gets it's value in int
         *(int*)&output = (int) bitset<64>(out).to_ulong();
         sqrtInput = sqrt(input);
 
@@ -59,7 +59,7 @@ int main()
         }
         else
         {
-            cout << "not OK" << endl;
+            cout << "ERROR ----------------------------!!!!" << endl;
         }
     }
 
