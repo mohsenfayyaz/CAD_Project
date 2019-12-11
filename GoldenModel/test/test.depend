@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1576073584 source:f:\programming\university\05_computer aided digital system design\cad_project\goldenmodel\test\main.cpp
+	<iostream>
+	<stdio.h>
+	"ieee.cpp"
+	<math.h>
+	<sstream>
+	<fstream>
+	<string>
+	<bitset>
+
+1576073742 source:f:\programming\university\05_computer aided digital system design\cad_project\goldenmodel\test\ieee.cpp
+	<stdio.h>
+
+1576073725 f:\programming\university\05_computer aided digital system design\cad_project\goldenmodel\test\ieee.cpp
+	<stdio.h>
+

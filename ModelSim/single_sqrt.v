@@ -26,7 +26,9 @@ module sqrt(
   reg       s_output_z_stb;
   reg       [31:0] s_output_z;
   reg       s_input_a_ack;
-
+  
+  `include "single_packer.v"
+  
   reg       [3:0] state;
   parameter get_a         = 4'd0,
             //get_b         = 4'd1,
@@ -86,6 +88,29 @@ module sqrt(
     .output_z(adder_z),
     .output_z_stb(adder_z_stb),
     .output_z_ack(adder_z_ack));
+    
+  function [31:0] single_pack_function;
+    input z_s;
+    input[9:0] z_e;
+    input[23:0] z_m;
+    begin
+      //if overflow occurs, return inf
+        if ($signed(z_e) > 127) begin
+         single_pack_function[22 : 0] = 0;
+         single_pack_function[30 : 23] = 255;
+         single_pack_function[31] = z_s;
+        end
+        else if ($signed(z_e) == -126 && z_m[23] == 0) begin
+          single_pack_function[30 : 23] = 0;
+          single_pack_function[22 : 0] = z_m[22:0];
+          single_pack_function[31] = z_s;
+        end else begin
+          single_pack_function[22 : 0] = z_m[22:0];
+          single_pack_function[30 : 23] = z_e[7:0] + 127;
+          single_pack_function[31] = z_s;
+        end
+    end
+  endfunction
 
   reg[31:0] sqrt_n, sqrt_n_new;
   always @(posedge clk)
@@ -113,8 +138,15 @@ module sqrt(
 
       special_cases:
       begin
+        //if a is less than 0 return NaN 
+        if (a_s == 1) begin
+          z[31] <= 1;
+          z[30:23] <= 255;
+          z[22] <= 1;
+          z[21:0] <= 0;
+          state <= put_z;
         //if a is NaN or b is NaN return NaN 
-        if (a_e == 128 && a_m != 0) begin
+        end else if (a_e == 128 && a_m != 0) begin
           z[31] <= 1;
           z[30:23] <= 255;
           z[22] <= 1;
@@ -157,7 +189,8 @@ module sqrt(
       begin
         z_s <= a_s;
         z_e <= a_e >> 1; // a_e/2
-        sqrt_n <= 32'b01000001001000000000000000000000;  // 10
+        //sqrt_n <= single_pack_function(a_s, a_e >> 1, a_m);  // a/2 as X0
+        sqrt_n <= a;
         count <= 0;
         
         state <= sqrt_1;
@@ -192,7 +225,8 @@ module sqrt(
           adder_a_stb <= 0;
           adder_b_stb <= 0;
           adder_z_ack <= 1;
-          if(count == 80)
+          s_output_z <= sqrt_n;
+          if(count == 100 || sqrt_n == {adder_z[31], adder_z[30:23] - 1, adder_z[22:0]})
           begin
             z <= {adder_z[31], adder_z[30:23] - 1, adder_z[22:0]};
             state <= put_z;

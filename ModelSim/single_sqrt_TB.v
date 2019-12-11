@@ -6,6 +6,7 @@ module sqrtTB();
   wire   [31:0] z;
   reg a_stb, z_ack;
   wire a_ack, z_stb;
+  integer fd;
   
   always #10 clk=~clk;  // 25MHz
   
@@ -18,16 +19,31 @@ module sqrtTB();
     .output_z(z),
     .output_z_stb(z_stb),
     .output_z_ack(z_ack));
+    
   initial begin
+    fd = $fopen("output.txt","w");
+    
     a = 0;
     rst = 1;
     #1000
     rst = 0;
-    a = 32'b01000001110010000000000000000000;
+    
+    repeat(10) begin
+    z_ack = 0;
+    //a = 32'b01000001110010000000000000000000;
+    //a = 32'b00111111011111101101111000000101;
+    a = $random;
     a_stb = 1;
     #100;
     a_stb = 0;
-    #800000;
+    #500000;
+    $fwrite(fd, "%b %b\n", a, z);  //Unsigned Integer
+    z_ack = 1;
+    # 100;
+    
+    end
+    
+    $fclose(fd);  
     $stop;  
   end
 endmodule
