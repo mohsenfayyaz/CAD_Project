@@ -1,20 +1,26 @@
 #include <iostream>
 #include <stdio.h>
 #include "ieee.cpp"
-#include <math.h>
+//#include <math.h>
 #include <sstream>
 #include <fstream>
 #include <string>
 #include<bitset>
+#include <cmath>
 using namespace std;
-string intToBinary(int n, int i=32)
+string intToBinary(long int n, int i=32)
 {
     string result = "";
     // Prints the binary representation
     // of a number n up to i-bits.
     int k;
     for (k = i - 1; k >= 0; k--) {
-
+        if (i == 32 && k == 22){
+            result += ".";
+        }
+        if(i == 64 && k == 51){
+            result += ".";
+        }
         if ((n >> k) & 1)
             result += "1";
         else
@@ -46,12 +52,16 @@ int main()
         ss >> out;
         *(int*)&input = (int) bitset<64>(in).to_ulong();  // & gets the pointer to input memory, (int*) casts the address to int* and * at last gets it's value in int
         *(int*)&output = (int) bitset<64>(out).to_ulong();
-        sqrtInput = sqrt(input);
+        sqrtInput = sqrt((double)input);
+
 
         cout << endl;
+        double ff = sqrt((double)input);
+        float f = ff;
+        cout << "RRRRR    : " << intToBinary(*(int*)&f) << endl;
         cout << "INPUT    : " <<  in << "|" << out << endl;
         cout << "CPP CODE : " << intToBinary(*(int*)&input) << "|" << intToBinary(*(int*)&(sqrtInput)) << endl;
-        cout << "FLOAT VAL: " << input << "|" << output << "|" << sqrt(input) << endl;
+        cout << "FLOAT VAL: " << input << "|" << output << "|" << sqrtInput << endl;
 
         if(*(int*)&(sqrtInput) == *(int*)&(output))
         {
