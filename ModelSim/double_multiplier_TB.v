@@ -1,6 +1,6 @@
 `timescale 1ns/1ns 
 
-module multiplierTB();
+module double_multiplier_TB();
   reg clk=0, rst=1;
   reg   [63:0] a, b;
   wire   [63:0] z;
