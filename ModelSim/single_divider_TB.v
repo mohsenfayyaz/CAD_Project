@@ -1,7 +1,7 @@
 `timescale 1ns/1ns 
 `include "defines.v"
 
-module dividerTB();
+module single_divider_TB();
   reg clk=0, rst=1;
   reg   [31:0] a, b;
   wire   [31:0] z;

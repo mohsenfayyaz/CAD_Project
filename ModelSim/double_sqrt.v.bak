@@ -7,23 +7,23 @@
 module double_sqrt(
         input_a,
         input_a_stb,
-        output_z_ack,
+        input_z_ack,
         clk,
         rst,
         output_z,
         output_z_stb,
-        input_a_ack);
+        output_a_ack);
 
   input     clk;
   input     rst;
 
   input     [63:0] input_a;
   input     input_a_stb;
-  output    input_a_ack;
+  output    output_a_ack;
 
   output    [63:0] output_z;
   output    output_z_stb;
-  input     output_z_ack;
+  input     input_z_ack;
 
   reg       s_output_z_stb;
   reg       [63:0] s_output_z;
@@ -133,14 +133,12 @@ module double_sqrt(
           state <= put_z;
         //if a is inf return inf
         end else if (a_e == 1024) begin
-          $display("a");
           z[63] <= 0;
           z[62:52] <= 2047;
           z[51:0] <= 0;
           state <= put_z;
         //if a is zero return zero
         end else if (($signed(a_e) == -1023) && (a_m == 0)) begin
-          $display("b");
           z[63] <= 0;
           z[62:52] <= 0;
           z[51:0] <= 0;
@@ -186,7 +184,7 @@ module double_sqrt(
         divider_z_ack <= 0;
         if(divider_z_stb) 
         begin
-          $display("%b/%b = %b", a, sqrt_n, divider_z);
+          //$display("%b/%b = %b", a, sqrt_n, divider_z);
           state <= sqrt_2;
           sqrt_n_new <= divider_z;
           divider_z_ack <= 1;
@@ -204,8 +202,8 @@ module double_sqrt(
         adder_z_ack <= 0;
         if(adder_z_stb)
         begin
-          $display("%b+%b = %b", sqrt_n_new, sqrt_n, {adder_z[63], adder_z[62:52] - 1, adder_z[51:0]});
-          $display("%b+%b/2 = %b", sqrt_n_new, sqrt_n, adder_z);
+          //$display("%b+%b = %b", sqrt_n_new, sqrt_n, {adder_z[63], adder_z[62:52] - 1, adder_z[51:0]});
+          //$display("%b+%b/2 = %b", sqrt_n_new, sqrt_n, adder_z);
           adder_a_stb <= 0;
           adder_b_stb <= 0;
           adder_z_ack <= 1;

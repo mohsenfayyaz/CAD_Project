@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-#include "ieee.cpp"
 //#include <math.h>
 #include <sstream>
 #include <fstream>
@@ -15,12 +14,12 @@ string intToBinary(long int n, int i=32)
     // of a number n up to i-bits.
     int k;
     for (k = i - 1; k >= 0; k--) {
-        if (i == 32 && k == 22){
+        /*if (i == 32 && k == 22){
             result += ".";
         }
         if(i == 64 && k == 51){
             result += ".";
-        }
+        }*/
         if ((n >> k) & 1)
             result += "1";
         else
@@ -44,7 +43,7 @@ int main()
 	float input=1.0, output=1.0, sqrtInput;
     string sample;
     ifstream file;
-    file.open("../../ModelSim/output.txt");
+    file.open("../../ModelSim/output/single_sqrt_output.txt");
     while (getline(file, sample))
     {
         stringstream ss(sample);
@@ -58,7 +57,7 @@ int main()
         cout << endl;
         double ff = sqrt((double)input);
         float f = ff;
-        cout << "RRRRR    : " << intToBinary(*(int*)&f) << endl;
+        //cout << "RRRRR    : " << intToBinary(*(int*)&f) << endl;
         cout << "INPUT    : " <<  in << "|" << out << endl;
         cout << "CPP CODE : " << intToBinary(*(int*)&input) << "|" << intToBinary(*(int*)&(sqrtInput)) << endl;
         cout << "FLOAT VAL: " << input << "|" << output << "|" << sqrtInput << endl;
@@ -73,5 +72,7 @@ int main()
         }
     }
 
+    cout << endl << endl << "Press any key to continue." << endl;
+    getchar();
     return 0;
 }

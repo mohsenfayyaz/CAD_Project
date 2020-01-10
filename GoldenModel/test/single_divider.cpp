@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-#include "ieee.cpp"
 #include <math.h>
 #include <sstream>
 #include <fstream>
@@ -38,7 +37,7 @@ int main()
 	float input1, input2, output, divideResult;
     string sample;
     ifstream file;
-    file.open("../../ModelSim/single_divider_output.txt");
+    file.open("../../ModelSim/output/single_divider_output.txt");
     while (getline(file, sample))
     {
         stringstream ss(sample);
@@ -51,9 +50,9 @@ int main()
         divideResult = input1/input2;
 
         cout << endl;
-        cout << "INPUT    : " <<  in1 << "/" << in2 << "=" << out << endl;
-        cout << "CPP CODE : " << intToBinary(*(int*)&input1) << "/" << intToBinary(*(int*)&(input2)) << "=" << intToBinary(*(int*)&(divideResult)) << endl;
-        cout << "FLOAT VAL: " << input1 << "/" << input2 << "=" << output << "|" << divideResult << endl;
+        cout << "INPUT    : " <<  in1 << "/" << in2 << " = " << out << endl;
+        cout << "CPP CODE : " << intToBinary(*(int*)&input1) << "/" << intToBinary(*(int*)&(input2)) << " = " << intToBinary(*(int*)&(divideResult)) << endl;
+        cout << "FLOAT VAL: " << input1 << "/" << input2 << " = " << output << "|" << divideResult << endl;
 
         if(*(int*)&(divideResult) == *(int*)&(output))
         {
@@ -65,6 +64,9 @@ int main()
         }
     }
 
+
+    cout << endl << endl << "Press any key to continue." << endl;
+    getchar();
     return 0;
 }
 

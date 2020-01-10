@@ -4,6 +4,7 @@
 `define SINGLE_SQRT_MAX_LOOP 50
 `define DOUBLE_SQRT_MAX_LOOP 200
 `define SINGLE_DIVIDER_MAX_LOOP 30
+`define DOUBLE_DIVIDER_MAX_LOOP 60
 
 `define SINGLE_DIVIDER_OUTPUT_FILE_NAME "output/single_divider_output.txt"
 `define DOUBLE_DIVIDER_OUTPUT_FILE_NAME "output/double_divider_output.txt"

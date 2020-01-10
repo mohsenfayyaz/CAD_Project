@@ -96,5 +96,7 @@ int main()
         }
     }
 
+    cout << endl << endl << "Press any key to continue." << endl;
+    getchar();
     return 0;
 }

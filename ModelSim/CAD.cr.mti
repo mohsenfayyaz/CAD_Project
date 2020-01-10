@@ -12,6 +12,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	divider
 
+} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt_TB.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt_TB.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module double_sqrt_TB
+
+Top level modules:
+	double_sqrt_TB
+
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main_TB.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main_TB.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Main_TB
@@ -26,6 +33,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	double_adder
 
+} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_TB.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_TB.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module single_divider_TB
+
+Top level modules:
+	single_divider_TB
+
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Main
@@ -34,12 +48,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Main
 
-} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_TB.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_TB.v}
+} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_TB.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_TB.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module dividerTB
+-- Compiling module double_divider_TB
 
 Top level modules:
-	dividerTB
+	double_divider_TB
 
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/defines.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/defines.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -67,10 +81,10 @@ Top level modules:
 
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt_TB.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt_TB.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module sqrtTB
+-- Compiling module single_sqrt_TB
 
 Top level modules:
-	sqrtTB
+	single_sqrt_TB
 
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -79,12 +93,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	multiplier
 
-} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v}
+} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module adder
+-- Compiling module double_divider
 
 Top level modules:
-	adder
+	double_divider
 
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -93,12 +107,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	double_multiplier
 
-} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v}
+} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module double_divider
+-- Compiling module adder
 
 Top level modules:
-	double_divider
+	adder
 
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -114,6 +128,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	sqrt
+
+} {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module double_divider_newton
+
+Top level modules:
+	double_divider_newton
 
 } {} {}} {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v} {1 {vlog -work work {F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

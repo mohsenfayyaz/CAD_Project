@@ -1,6 +1,7 @@
 `timescale 1ns/1ns 
+`include "defines.v"
 
-module sqrtTB();
+module single_sqrt_TB();
   reg clk=0, rst=1;
   reg   [31:0] a;
   wire   [31:0] z;
@@ -21,7 +22,7 @@ module sqrtTB();
     .output_z_ack(z_ack));
     
   initial begin
-    fd = $fopen("output.txt","w");
+    fd = $fopen(`SINGLE_SQRT_OUTPUT_FILE_NAME,"w");
     
     a = 0;
     rst = 1;
