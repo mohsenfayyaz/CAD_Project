@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v,1578553720,verilog,,F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v,,double_multiplier,,,,,,,,
+F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v,1575107664,verilog,,,,multiplierTB,,,,,,,,
+F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v,1575103134,verilog,,F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v,,multiplier,,,,,,,,
+F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,

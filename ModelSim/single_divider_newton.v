@@ -15,7 +15,7 @@ module divider_newton(
         output_z,
         output_z_stb,
         input_a_ack,
-        input_b_ack);
+        input_b_ack) ;
 
   input     clk;
   input     rst;
@@ -48,12 +48,11 @@ module divider_newton(
             divide_1      = 4'd7,
             divide_2      = 4'd8,
             divide_3      = 4'd9,
-            normalise_1   = 4'd10,
-            normalise_2   = 4'd11,
+            divide_4      = 4'd10,
+            divide_5      = 4'd11,
             round         = 4'd12,
             pack          = 4'd13,
-            put_z         = 4'd14,
-            divide_4      = 4'd15;
+            put_z         = 4'd14;
 
   reg       [31:0] a, b, z;
   reg       [23:0] a_m, b_m, z_m;
@@ -97,24 +96,23 @@ module divider_newton(
     .output_z_stb(multiplier_z_stb),
     .output_z_ack(multiplier_z_ack));
   
-  function [31:0] invert_exponent_function;
+  function [31:0] abs_invert_exponent_function;
     input[31:0] in;
-    invert_exponent_function = {in[31], 254 - in[30:23], in[22:0]};
+    abs_invert_exponent_function = {1'b0, 254 - in[30:23] - 1, in[22:0]};  // and a minus 1 so that the approximation becomes less than real division to converge
   endfunction
   
+  reg[9:0] temp_dist;
   task normalize_exponent;
     input [31:0] a;
     input [31:0] b;
     output[31:0] a_out;
     output[31:0] b_out;
-    
-    signed reg[9:0] temp_dist;
     begin
       //Denormalised Number
       if ({|b[30:23]} == 0) begin
         b_e <= -126;
       end else begin
-        temp_dist = 126 - b[30:23];  // set the e = -1 = 126;
+        temp_dist = 126 - b[30:23];  // set the e = -1 = 126; so that 0.5 <= D=b <= 1
         a[30:23] = a[30:23] + temp_dist;
         b[30:23] = 126;
       end
@@ -237,10 +235,13 @@ module divider_newton(
       begin
         z_s <= a_s ^ b_s;
         z_e <= a_e - b_e;
+        //a[31] <= a_s ^ b_s;  // To multiply in the end and correct the sign
         
         // 0.5 <= d0 <= 1
         
-        x_n <= invert_exponent_function(b);  // b with inverted power of 2 as X0
+        x_n <= abs_invert_exponent_function(b);  // b with inverted power of 2 as X0
+        b <= {1'b0, b[30:0]};
+        $display("%b -> %b", b, abs_invert_exponent_function(b));
         count <= 0;
         
         state <= divide_1;
@@ -253,10 +254,14 @@ module divider_newton(
         multiplier_a_stb <= 1;
         multiplier_b_stb <= 1;
         multiplier_z_ack <= 0;
-        if(multiplier_z_stb) 
+        $display("s");
+        if(multiplier_z_stb)
         begin
           state <= divide_2;
           x_n_new <= multiplier_z;
+          $display("->x_n %b", x_n);
+          $display("->b %b", b);
+          $display("->x_n_new_multiply %b", multiplier_z);
           multiplier_z_ack <= 1;
           multiplier_a_stb <= 0;
           multiplier_b_stb <= 0;
@@ -266,7 +271,7 @@ module divider_newton(
       divide_2:  // 2 - (DXi=x_n_new)
       begin
         adder_a <= `FLOATING_POINT_SINGLE_2;
-        adder_b <= x_n_new;
+        adder_b <= {1'b1, x_n_new[30:0]};
         adder_a_stb <= 1;
         adder_b_stb <= 1;
         adder_z_ack <= 0;
@@ -274,6 +279,7 @@ module divider_newton(
         begin
           state <= divide_3;
           x_n_new <= adder_z;
+          $display("->x_n_new_adder %b", adder_z);
           adder_z_ack <= 1;
           adder_a_stb <= 0;
           adder_b_stb <= 0;
@@ -289,7 +295,7 @@ module divider_newton(
         multiplier_z_ack <= 0;
         if(multiplier_z_stb) 
         begin
-          state <= divide_2;
+          state <= divide_4;
           x_n_new <= multiplier_z;
           multiplier_z_ack <= 1;
           multiplier_a_stb <= 0;
@@ -297,20 +303,23 @@ module divider_newton(
           
           if(`DEBUGGING) 
             s_output_z <= x_n;  //Show results before finsihing calculation
-            
-          if(count == `SINGLE_DIVIDER_MAX_LOOP || x_n == x_n_new)
-          begin
-            state <= divide_4;
-          end else begin
-            state <= divide_1;
-            count <= count + 1;
-            x_n <= x_n_new;
-          end
-          
         end
       end
       
-      divide_4:  // (N=a) * ((1/D)=x_n_new)
+      divide_4: // Wait for multiplier to acknowledge
+      begin
+        if(!multiplier_z_stb)
+          if(count == `SINGLE_DIVIDER_MAX_LOOP || x_n == x_n_new)
+            begin
+              state <= divide_5;
+            end else begin
+              state <= divide_1;
+              count <= count + 1;
+              x_n <= x_n_new;
+          end
+      end
+      
+      divide_5:  // (N=a) * ((1/D)=x_n_new)
       begin
         multiplier_a <= a;
         multiplier_b <= x_n_new;
@@ -320,7 +329,7 @@ module divider_newton(
         if(multiplier_z_stb) 
         begin
           state <= put_z;
-          z <= multiplier_z;
+          z <= {a_s ^ b_s, multiplier_z[30:0]};  // Correct the sign because we used abs(b) for 1/b
           multiplier_z_ack <= 1;
           multiplier_a_stb <= 0;
           multiplier_b_stb <= 0;

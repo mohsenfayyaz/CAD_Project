@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jan  9 21:29:11 2020
+# Process ID: 732
+# Current directory: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/behav/xsim/xsim.dir/multiplierTB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source F:/Programming/University/05_Computer -notrace
+couldn't read file "F:/Programming/University/05_Computer": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan  9 21:29:11 2020...

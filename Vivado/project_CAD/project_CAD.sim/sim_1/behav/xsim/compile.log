@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module double_multiplier
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplier
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplierTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

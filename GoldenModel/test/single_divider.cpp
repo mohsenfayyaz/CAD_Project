@@ -45,7 +45,7 @@ int main()
         ss >> in1;
         ss >> in2;
         ss >> out;
-        *(int*)&input1 = (int) bitset<64>(in1).to_ulong();
+        *(int*)&input1 = (int) bitset<64>(in1).to_ulong();  // String to float number
         *(int*)&input2 = (int) bitset<64>(in2).to_ulong();
         *(int*)&output = (int) bitset<64>(out).to_ulong();
         divideResult = input1/input2;
