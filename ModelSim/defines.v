@@ -10,3 +10,5 @@
 `define DOUBLE_DIVIDER_OUTPUT_FILE_NAME "output/double_divider_output.txt"
 `define SINGLE_SQRT_OUTPUT_FILE_NAME "output/single_sqrt_output.txt"
 `define DOUBLE_SQRT_OUTPUT_FILE_NAME "output/double_sqrt_output.txt"
+
+`define NEWTON_MODE

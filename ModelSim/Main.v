@@ -43,6 +43,7 @@ module Main(
   wire input_a_stb_single_div, output_z_stb_single_div, input_a_ack_single_div, input_b_ack_single_div;
   wire[31:0] output_z_single_div;
   assign input_a_stb_single_div = input_a_stb & input_a_stb_single_divS;
+  `ifndef NEWTON_MODE
   divider single_divider_instance(
         .input_a(input_as),
         .input_b(input_bs),
@@ -55,7 +56,20 @@ module Main(
         .output_z_stb(output_z_stb_single_div),
         .input_a_ack(input_a_ack_single_div),
         .input_b_ack(input_b_ack_single_div));
-  
+  `else
+  divider_newton single_divider_newton_instance(
+        .input_a(input_as),
+        .input_b(input_bs),
+        .input_a_stb(input_a_stb_single_div),
+        .input_b_stb(input_b_stb),
+        .output_z_ack(output_z_ack),
+        .clk(clk),
+        .rst(rst),
+        .output_z(output_z_single_div),
+        .output_z_stb(output_z_stb_single_div),
+        .input_a_ack(input_a_ack_single_div),
+        .input_b_ack(input_b_ack_single_div));
+  `endif
   wire input_a_stb_single_sqrt, output_z_stb_single_sqrt, input_a_ack_single_sqrt;
   wire[31:0] output_z_single_sqrt;
   assign input_a_stb_single_sqrt = input_a_stb & input_a_stb_single_sqrtS;
@@ -72,6 +86,7 @@ module Main(
   wire input_a_stb_double_div, output_z_stb_double_div, input_a_ack_double_div, input_b_ack_double_div;
   wire[63:0] output_z_double_div;
   assign input_a_stb_double_div = input_a_stb & input_a_stb_double_divS;
+  `ifndef NEWTON_MODE
   double_divider double_divider_instance(
         .input_a(input_ad),
         .input_b(input_bd),
@@ -84,12 +99,26 @@ module Main(
         .output_z_stb(output_z_stb_double_div),
         .input_a_ack(input_a_ack_double_div),
         .input_b_ack(input_b_ack_double_div));
+  `else
+    double_divider_newton double_divider_newton_instance(
+        .input_a(input_ad),
+        .input_b(input_bd),
+        .input_a_stb(input_a_stb_double_div),
+        .input_b_stb(input_b_stb),
+        .output_z_ack(output_z_ack),
+        .clk(clk),
+        .rst(rst),
+        .output_z(output_z_double_div),
+        .output_z_stb(output_z_stb_double_div),
+        .input_a_ack(input_a_ack_double_div),
+        .input_b_ack(input_b_ack_double_div));
+  `endif
 
   wire input_a_stb_double_sqrt, output_z_stb_double_sqrt, input_a_ack_double_sqrt;
   wire[31:0] output_z_double_sqrt;/////////////////////////
   assign input_a_stb_double_sqrt = input_a_stb & input_a_stb_double_sqrtS;
-  sqrt double_sqrt_instance(
-        .input_a(input_as),
+  double_sqrt double_sqrt_instance(
+        .input_a(input_ad),
         .input_a_stb(input_a_stb_double_sqrt),
         .output_z_ack(output_z_ack),
         .clk(clk),

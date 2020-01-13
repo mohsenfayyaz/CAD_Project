@@ -6,7 +6,7 @@ module Main_TB();
   wire[31:0] zs;
   wire[63:0] zd;
   reg a_stb, b_stb, z_ack;
-  wire a_ack, b_ack, z_stb, ready;
+  wire a_ack, b_ack, z_stb;
   reg[1:0] process;
 
   always #10 clk = ~clk;
@@ -88,23 +88,44 @@ module Main_TB();
     end
 
   process = 2'b01;
-    repeat(85) begin
-      #100 z_ack = 0;
-      as = $random;
-      a_stb = 1;
+  repeat(85) begin
+    #100 z_ack = 0;
+    as = $random;
+    a_stb = 1;
 
-      while(!a_ack)
-        #1 a_stb = 1;
-      while(a_ack)
-        #1 a_stb = 1;
-      a_stb = 0;
+    while(!a_ack)
+      #1 a_stb = 1;
+    while(a_ack)
+      #1 a_stb = 1;
+    a_stb = 0;
 
-      while(!z_stb)
-        #580;
-      #85 z_ack = 1;
-      #850;
-    end
+    while(!z_stb)
+      #580;
+    #85 z_ack = 1;
     #850;
-    $stop;
-    end
+  end
+
+  process = 2'b11;
+  repeat(85) begin
+    #100 z_ack = 0;
+    ad = $random;
+    a_stb = 1;
+
+    while(!a_ack)
+      #1 a_stb = 1;
+    while(a_ack)
+      #1 a_stb = 1;
+    a_stb = 0;
+
+    while(!z_stb)
+      #580;
+    #85 z_ack = 1;
+    #850;
+  end
+
+    
+  #850;
+  $stop;
+  end
+
 endmodule
