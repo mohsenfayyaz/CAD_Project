@@ -241,7 +241,7 @@ module divider_newton(
         
         x_n <= abs_invert_exponent_function(b);  // b with inverted power of 2 as X0
         b <= {1'b0, b[30:0]};
-        $display("%b -> %b", b, abs_invert_exponent_function(b));
+        //$display("%b -> %b", b, abs_invert_exponent_function(b));
         count <= 0;
         
         state <= divide_1;
@@ -254,14 +254,13 @@ module divider_newton(
         multiplier_a_stb <= 1;
         multiplier_b_stb <= 1;
         multiplier_z_ack <= 0;
-        $display("s");
         if(multiplier_z_stb)
         begin
           state <= divide_2;
           x_n_new <= multiplier_z;
-          $display("->x_n %b", x_n);
-          $display("->b %b", b);
-          $display("->x_n_new_multiply %b", multiplier_z);
+          //$display("->x_n %b", x_n);
+          //$display("->b %b", b);
+          //$display("->x_n_new_multiply %b", multiplier_z);
           multiplier_z_ack <= 1;
           multiplier_a_stb <= 0;
           multiplier_b_stb <= 0;
@@ -279,7 +278,7 @@ module divider_newton(
         begin
           state <= divide_3;
           x_n_new <= adder_z;
-          $display("->x_n_new_adder %b", adder_z);
+          //$display("->x_n_new_adder %b", adder_z);
           adder_z_ack <= 1;
           adder_a_stb <= 0;
           adder_b_stb <= 0;

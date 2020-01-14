@@ -47,7 +47,7 @@ module double_sqrt_TB();
     
     end
     
-    $fclose(fd);  
+    $fclose(fd);
     $stop;  
   end
 endmodule

@@ -1,12 +1,13 @@
 //IEEE Floating Point Unit (Main module)
 //Copyright (C) Hossein Entezari 2020
 //2020-01-01
+`include "defines.v"
 
 module Main(
-        input_as,
-        input_bs,
-        input_ad,
-        input_bd,
+        input_as,  // single
+        input_bs,  // single
+        input_ad,  // double
+        input_bd,  // double
         input_a_stb,
         input_b_stb,
         output_z_ack,
@@ -43,6 +44,8 @@ module Main(
   wire input_a_stb_single_div, output_z_stb_single_div, input_a_ack_single_div, input_b_ack_single_div;
   wire[31:0] output_z_single_div;
   assign input_a_stb_single_div = input_a_stb & input_a_stb_single_divS;
+  
+  
   `ifndef NEWTON_MODE
   divider single_divider_instance(
         .input_a(input_as),
@@ -70,6 +73,7 @@ module Main(
         .input_a_ack(input_a_ack_single_div),
         .input_b_ack(input_b_ack_single_div));
   `endif
+  
   wire input_a_stb_single_sqrt, output_z_stb_single_sqrt, input_a_ack_single_sqrt;
   wire[31:0] output_z_single_sqrt;
   assign input_a_stb_single_sqrt = input_a_stb & input_a_stb_single_sqrtS;
@@ -86,6 +90,7 @@ module Main(
   wire input_a_stb_double_div, output_z_stb_double_div, input_a_ack_double_div, input_b_ack_double_div;
   wire[63:0] output_z_double_div;
   assign input_a_stb_double_div = input_a_stb & input_a_stb_double_divS;
+  
   `ifndef NEWTON_MODE
   double_divider double_divider_instance(
         .input_a(input_ad),
@@ -115,7 +120,7 @@ module Main(
   `endif
 
   wire input_a_stb_double_sqrt, output_z_stb_double_sqrt, input_a_ack_double_sqrt;
-  wire[31:0] output_z_double_sqrt;/////////////////////////
+  wire[63:0] output_z_double_sqrt;/////////////////////////
   assign input_a_stb_double_sqrt = input_a_stb & input_a_stb_double_sqrtS;
   double_sqrt double_sqrt_instance(
         .input_a(input_ad),
@@ -218,10 +223,10 @@ module Main_controllerUnit(
               else ns = ps;
         end
         fetch: begin
-              if(process_tmp == 2'b00)      ns = wait_single_div;
-              else if(process_tmp == 2'b01) ns = wait_single_sqrt;
-              else if(process_tmp == 2'b10) ns = wait_double_div;
-              else if(process_tmp == 2'b11) ns = wait_double_sqrt;
+              if(process_tmp == `PROCESS_SINGLE_DIVIDER)      ns = wait_single_div;
+              else if(process_tmp == `PROCESS_SINGLE_SQRT) ns = wait_single_sqrt;
+              else if(process_tmp == `PROCESS_DOUBLE_DIVIDER) ns = wait_double_div;
+              else if(process_tmp == `PROCESS_DOUBLE_SQRT) ns = wait_double_sqrt;
         end
         wait_single_div: begin
               if(output_z_stb == 1'b1) ns = wait_z_stb;

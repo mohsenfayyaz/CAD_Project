@@ -11,4 +11,10 @@
 `define SINGLE_SQRT_OUTPUT_FILE_NAME "output/single_sqrt_output.txt"
 `define DOUBLE_SQRT_OUTPUT_FILE_NAME "output/double_sqrt_output.txt"
 
+// Comment this to use default divider
 `define NEWTON_MODE
+
+`define PROCESS_SINGLE_DIVIDER 2'b00
+`define PROCESS_SINGLE_SQRT 2'b01
+`define PROCESS_DOUBLE_DIVIDER 2'b10
+`define PROCESS_DOUBLE_SQRT 2'b11
