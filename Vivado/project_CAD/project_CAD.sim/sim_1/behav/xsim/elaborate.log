@@ -1,14 +1,42 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a84e1ea2d8bb4a02a4b2840b56f7f81d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplierTB_behav xil_defaultlib.multiplierTB xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 8f83ddcf15bf4bedbdc2a5dc50742d0f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Main_vivado_TB_behav xil_defaultlib.Main_vivado_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v" Line 7. Module divider_newton doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v" Line 5. Module adder doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v" Line 4. Module multiplier doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v" Line 7. Module sqrt doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider.v" Line 5. Module divider doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v" Line 5. Module adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v" Line 7. Module double_divider_newton doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v" Line 5. Module double_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v" Line 4. Module double_multiplier doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v" Line 7. Module double_sqrt doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v" Line 5. Module double_divider doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v" Line 5. Module double_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main.v" Line 155. Module Main_controllerUnit doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFGCE(CE_TYPE="ASYNC")
+Compiling module unisims_ver.MMCME4_ADV(CLKFBOUT_MULT_F=12.0,...
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.adder
 Compiling module xil_defaultlib.multiplier
-Compiling module xil_defaultlib.multiplierTB
+Compiling module xil_defaultlib.divider_newton
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.sqrt
+Compiling module xil_defaultlib.double_adder
+Compiling module xil_defaultlib.double_multiplier
+Compiling module xil_defaultlib.double_divider_newton
+Compiling module xil_defaultlib.double_divider
+Compiling module xil_defaultlib.double_sqrt
+Compiling module xil_defaultlib.Main_controllerUnit
+Compiling module xil_defaultlib.Main_vivado
+Compiling module xil_defaultlib.Main_vivado_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot multiplierTB_behav
+Built simulation snapshot Main_vivado_TB_behav

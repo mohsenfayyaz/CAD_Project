@@ -29,8 +29,6 @@ module sqrt(
   reg       [31:0] s_output_z;
   reg       s_input_a_ack;
   
-  `include "single_packer.v"
-  
   reg       [3:0] state;
   parameter get_a         = 4'd0,
             //get_b         = 4'd1,

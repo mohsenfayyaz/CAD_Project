@@ -233,8 +233,8 @@ module divider_newton(
 
       divide_0:
       begin
-        z_s <= a_s ^ b_s;
-        z_e <= a_e - b_e;
+        //z_s <= a_s ^ b_s;
+        //z_e <= a_e - b_e;
         //a[31] <= a_s ^ b_s;  // To multiply in the end and correct the sign
         
         // 0.5 <= d0 <= 1

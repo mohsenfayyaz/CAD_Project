@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.sim/sim_1/impl/func/xsim/Main_vivado_TB_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Main_controllerUnit
+INFO: [VRFC 10-311] analyzing module Main_vivado
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module adder_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-311] analyzing module divider_newton
+INFO: [VRFC 10-311] analyzing module double_adder
+INFO: [VRFC 10-311] analyzing module double_adder_1
+INFO: [VRFC 10-311] analyzing module double_divider
+INFO: [VRFC 10-311] analyzing module double_divider_newton
+INFO: [VRFC 10-311] analyzing module double_multiplier
+INFO: [VRFC 10-311] analyzing module double_sqrt
+INFO: [VRFC 10-311] analyzing module multiplier
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main_vivado_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Main_vivado_TB

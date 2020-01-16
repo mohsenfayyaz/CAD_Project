@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Main_vivado_TB_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="Main_vivado_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="13105715000fs"></ZoomStartTime>
+      <ZoomEndTime time="129305715001fs"></ZoomEndTime>
+      <Cursor1Time time="128500000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="129"></NameColumnWidth>
+      <ValueColumnWidth column_width="97"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/Main_vivado_TB/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/a_single" type="array">
+      <obj_property name="ElementShortName">a_single[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_single[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/b_single" type="array">
+      <obj_property name="ElementShortName">b_single[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_single[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/a_double" type="array">
+      <obj_property name="ElementShortName">a_double[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_double[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/b_double" type="array">
+      <obj_property name="ElementShortName">b_double[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b_double[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/z_single" type="array">
+      <obj_property name="ElementShortName">z_single[31:0]</obj_property>
+      <obj_property name="ObjectShortName">z_single[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/z_double" type="array">
+      <obj_property name="ElementShortName">z_double[63:0]</obj_property>
+      <obj_property name="ObjectShortName">z_double[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/a_stb" type="logic">
+      <obj_property name="ElementShortName">a_stb</obj_property>
+      <obj_property name="ObjectShortName">a_stb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/b_stb" type="logic">
+      <obj_property name="ElementShortName">b_stb</obj_property>
+      <obj_property name="ObjectShortName">b_stb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/z_ack" type="logic">
+      <obj_property name="ElementShortName">z_ack</obj_property>
+      <obj_property name="ObjectShortName">z_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/a_ack" type="logic">
+      <obj_property name="ElementShortName">a_ack</obj_property>
+      <obj_property name="ObjectShortName">a_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/b_ack" type="logic">
+      <obj_property name="ElementShortName">b_ack</obj_property>
+      <obj_property name="ObjectShortName">b_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/z_stb" type="logic">
+      <obj_property name="ElementShortName">z_stb</obj_property>
+      <obj_property name="ObjectShortName">z_stb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/process" type="array">
+      <obj_property name="ElementShortName">process[1:0]</obj_property>
+      <obj_property name="ObjectShortName">process[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_vivado_TB/fd" type="array">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -38,7 +38,7 @@ module Main(
   output    [63:0] output_zd;
   output    output_z_stb;
   input     output_z_ack;
-
+  
   wire input_a_stb_single_divS, input_a_stb_single_sqrtS, input_a_stb_double_divS, input_a_stb_double_sqrtS, output_zS;
 
   wire input_a_stb_single_div, output_z_stb_single_div, input_a_ack_single_div, input_b_ack_single_div;
@@ -143,7 +143,7 @@ module Main(
         .input_a_stb_single_sqrtS(input_a_stb_single_sqrtS),
         .input_a_stb_double_divS(input_a_stb_double_divS),
         .input_a_stb_double_sqrtS(input_a_stb_double_sqrtS),
-        .output_zS);
+        .output_zS(output_zS));
 
   assign output_zs = (output_zS == 1'b0) ? output_z_single_div : output_z_single_sqrt;
   assign output_zd = (output_zS == 1'b0) ? output_z_double_div : output_z_double_sqrt;
@@ -189,7 +189,7 @@ module Main_controllerUnit(
   end
 
   always@(posedge clk, posedge rst) begin
-        if(rst == 1'b1) {ps, ns} <= 6'b0;
+        if(rst == 1'b1) {ps} <= 6'b0;
         else ps <= ns;
   end
 
@@ -216,7 +216,8 @@ module Main_controllerUnit(
         endcase
   end
 
-  always@(ps, input_a_stb, process, output_z_stb) begin
+  always@(ps, input_a_stb, process, output_z_stb, process_tmp) begin
+        {ns} = idle;
         case(ps)
         idle: begin
               if(input_a_stb == 1'b1) ns = fetch;
@@ -249,7 +250,7 @@ module Main_controllerUnit(
               else ns = ps;
         end
         default: begin
-        //
+            ns = idle;
         end
         endcase
   end

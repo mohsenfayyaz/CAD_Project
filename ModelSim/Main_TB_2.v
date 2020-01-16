@@ -2,7 +2,7 @@
 //Copyright (C) Mohsen Fayyaz 2019 "mohsenfayyaz.ir"
 //2019-1-15
 //
-
+`timescale 1ns/1ns 
 `include "defines.v"
 
 module Main_TB_2();

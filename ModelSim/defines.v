@@ -1,4 +1,4 @@
-`define DEBUGGING 1
+`define DEBUGGING 0
 `define FLOATING_POINT_SINGLE_2 32'b01000000000000000000000000000000
 `define FLOATING_POINT_DOUBLE_2 64'b0100000000000000000000000000000000000000000000000000000000000000
 `define SINGLE_SQRT_MAX_LOOP 50
@@ -10,6 +10,11 @@
 `define DOUBLE_DIVIDER_OUTPUT_FILE_NAME "output/double_divider_output.txt"
 `define SINGLE_SQRT_OUTPUT_FILE_NAME "output/single_sqrt_output.txt"
 `define DOUBLE_SQRT_OUTPUT_FILE_NAME "output/double_sqrt_output.txt"
+
+`define VIVADO_SINGLE_DIVIDER_OUTPUT_FILE_NAME "single_divider_output.txt"
+`define VIVADO_DOUBLE_DIVIDER_OUTPUT_FILE_NAME "double_divider_output.txt"
+`define VIVADO_SINGLE_SQRT_OUTPUT_FILE_NAME "single_sqrt_output.txt"
+`define VIVADO_DOUBLE_SQRT_OUTPUT_FILE_NAME "double_sqrt_output.txt"
 
 // Comment this to use default divider
 `define NEWTON_MODE

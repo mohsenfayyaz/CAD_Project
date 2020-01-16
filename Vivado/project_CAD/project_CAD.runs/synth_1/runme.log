@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log multiplierTB.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source multiplierTB.tcl
+    with args -log Main_vivado.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_vivado.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,18 +8,50 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source multiplierTB.tcl -notrace
-Command: synth_design -top multiplierTB -part xczu7ev-ffvc1156-2-e
+source Main_vivado.tcl -notrace
+Command: synth_design -top Main_vivado -part xczu7ev-ffvc1156-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8520 
+INFO: Helper process launched with PID 2292 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 437.563 ; gain = 98.734
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 475.789 ; gain = 95.023
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'multiplierTB' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v:3]
-WARNING: [Synth 8-85] always block has no event control specified [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Main_vivado' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main_vivado.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1/.Xil/Vivado-14132-DESKTOP-FEIK2JA/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1/.Xil/Vivado-14132-DESKTOP-FEIK2JA/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'divider_newton' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v:7]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter normalise_b bound to: 4'b0101 
+	Parameter divide_0 bound to: 4'b0110 
+	Parameter divide_1 bound to: 4'b0111 
+	Parameter divide_2 bound to: 4'b1000 
+	Parameter divide_3 bound to: 4'b1001 
+	Parameter divide_4 bound to: 4'b1010 
+	Parameter divide_5 bound to: 4'b1011 
+	Parameter round bound to: 4'b1100 
+	Parameter pack bound to: 4'b1101 
+	Parameter put_z bound to: 4'b1110 
+INFO: [Synth 8-6157] synthesizing module 'adder' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v:5]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter align bound to: 4'b0100 
+	Parameter add_0 bound to: 4'b0101 
+	Parameter add_1 bound to: 4'b0110 
+	Parameter normalise_1 bound to: 4'b0111 
+	Parameter normalise_2 bound to: 4'b1000 
+	Parameter round bound to: 4'b1001 
+	Parameter pack bound to: 4'b1010 
+	Parameter put_z bound to: 4'b1011 
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (2#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v:5]
 INFO: [Synth 8-6157] synthesizing module 'multiplier' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v:4]
 	Parameter get_a bound to: 4'b0000 
 	Parameter get_b bound to: 4'b0001 
@@ -35,24 +67,225 @@ INFO: [Synth 8-6157] synthesizing module 'multiplier' [F:/Programming/University
 	Parameter pack bound to: 4'b1011 
 	Parameter put_z bound to: 4'b1100 
 INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier' (1#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v:4]
-WARNING: [Synth 8-3848] Net z_ack in module/entity multiplierTB does not have driver. [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'multiplierTB' (2#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/multiplierTB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (3#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v:128]
+INFO: [Synth 8-6155] done synthesizing module 'divider_newton' (4#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v:7]
+INFO: [Synth 8-6157] synthesizing module 'sqrt' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:7]
+	Parameter get_a bound to: 4'b0000 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter sqrt_0 bound to: 4'b0110 
+	Parameter sqrt_1 bound to: 4'b0111 
+	Parameter sqrt_2 bound to: 4'b1000 
+	Parameter sqrt_3 bound to: 4'b1001 
+	Parameter normalise_1 bound to: 4'b1010 
+	Parameter normalise_2 bound to: 4'b1011 
+	Parameter round bound to: 4'b1100 
+	Parameter pack bound to: 4'b1101 
+	Parameter put_z bound to: 4'b1110 
+INFO: [Synth 8-6157] synthesizing module 'divider' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider.v:5]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter normalise_b bound to: 4'b0101 
+	Parameter divide_0 bound to: 4'b0110 
+	Parameter divide_1 bound to: 4'b0111 
+	Parameter divide_2 bound to: 4'b1000 
+	Parameter divide_3 bound to: 4'b1001 
+	Parameter normalise_1 bound to: 4'b1010 
+	Parameter normalise_2 bound to: 4'b1011 
+	Parameter round bound to: 4'b1100 
+	Parameter pack bound to: 4'b1101 
+	Parameter put_z bound to: 4'b1110 
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'divider' (5#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:101]
+WARNING: [Synth 8-6014] Unused sequential element z_s_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:172]
+WARNING: [Synth 8-6014] Unused sequential element z_e_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'sqrt' (6#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:7]
+INFO: [Synth 8-6157] synthesizing module 'double_divider_newton' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:7]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter normalise_b bound to: 4'b0101 
+	Parameter divide_0 bound to: 4'b0110 
+	Parameter divide_1 bound to: 4'b0111 
+	Parameter divide_2 bound to: 4'b1000 
+	Parameter divide_3 bound to: 4'b1001 
+	Parameter divide_4 bound to: 4'b1010 
+	Parameter divide_5 bound to: 4'b1011 
+	Parameter round bound to: 4'b1100 
+	Parameter pack bound to: 4'b1101 
+	Parameter put_z bound to: 4'b1110 
+INFO: [Synth 8-6157] synthesizing module 'double_adder' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v:5]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter align bound to: 4'b0100 
+	Parameter add_0 bound to: 4'b0101 
+	Parameter add_1 bound to: 4'b0110 
+	Parameter normalise_1 bound to: 4'b0111 
+	Parameter normalise_2 bound to: 4'b1000 
+	Parameter round bound to: 4'b1001 
+	Parameter pack bound to: 4'b1010 
+	Parameter put_z bound to: 4'b1011 
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'double_adder' (7#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v:5]
+INFO: [Synth 8-6157] synthesizing module 'double_multiplier' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v:4]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter normalise_b bound to: 4'b0101 
+	Parameter multiply_0 bound to: 4'b0110 
+	Parameter multiply_1 bound to: 4'b0111 
+	Parameter normalise_1 bound to: 4'b1000 
+	Parameter normalise_2 bound to: 4'b1001 
+	Parameter round bound to: 4'b1010 
+	Parameter pack bound to: 4'b1011 
+	Parameter put_z bound to: 4'b1100 
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'double_multiplier' (8#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:109]
+WARNING: [Synth 8-6014] Unused sequential element z_s_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:217]
+WARNING: [Synth 8-6014] Unused sequential element z_e_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:218]
+INFO: [Synth 8-6155] done synthesizing module 'double_divider_newton' (9#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:7]
+INFO: [Synth 8-6157] synthesizing module 'double_sqrt' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:7]
+	Parameter get_a bound to: 4'b0000 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter sqrt_0 bound to: 4'b0110 
+	Parameter sqrt_1 bound to: 4'b0111 
+	Parameter sqrt_2 bound to: 4'b1000 
+	Parameter sqrt_3 bound to: 4'b1001 
+	Parameter normalise_1 bound to: 4'b1010 
+	Parameter normalise_2 bound to: 4'b1011 
+	Parameter round bound to: 4'b1100 
+	Parameter pack bound to: 4'b1101 
+	Parameter put_z bound to: 4'b1110 
+INFO: [Synth 8-6157] synthesizing module 'double_divider' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v:5]
+	Parameter get_a bound to: 4'b0000 
+	Parameter get_b bound to: 4'b0001 
+	Parameter unpack bound to: 4'b0010 
+	Parameter special_cases bound to: 4'b0011 
+	Parameter normalise_a bound to: 4'b0100 
+	Parameter normalise_b bound to: 4'b0101 
+	Parameter divide_0 bound to: 4'b0110 
+	Parameter divide_1 bound to: 4'b0111 
+	Parameter divide_2 bound to: 4'b1000 
+	Parameter divide_3 bound to: 4'b1001 
+	Parameter normalise_1 bound to: 4'b1010 
+	Parameter normalise_2 bound to: 4'b1011 
+	Parameter round bound to: 4'b1100 
+	Parameter pack bound to: 4'b1101 
+	Parameter put_z bound to: 4'b1110 
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'double_divider' (10#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:98]
+WARNING: [Synth 8-6014] Unused sequential element z_s_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:169]
+WARNING: [Synth 8-6014] Unused sequential element z_e_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:170]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'double_sqrt' (11#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:7]
+INFO: [Synth 8-6157] synthesizing module 'Main_controllerUnit' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main.v:155]
+	Parameter idle bound to: 0 - type: integer 
+	Parameter fetch bound to: 1 - type: integer 
+	Parameter wait_single_div bound to: 2 - type: integer 
+	Parameter wait_single_sqrt bound to: 3 - type: integer 
+	Parameter wait_double_div bound to: 4 - type: integer 
+	Parameter wait_double_sqrt bound to: 5 - type: integer 
+	Parameter wait_z_stb bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Main_controllerUnit' (12#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'Main_vivado' (13#1) [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/Main_vivado.v:6]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 492.688 ; gain = 153.859
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 562.820 ; gain = 182.055
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 492.688 ; gain = 153.859
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 562.820 ; gain = 182.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 562.820 ; gain = 182.055
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Finished Parsing XDC File [f:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Parsing XDC File [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1669.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1669.695 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1669.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1669.695 ; gain = 1288.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
-INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 492.688 ; gain = 153.859
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1669.695 ; gain = 1288.930
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  {f:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  {f:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property DONT_TOUCH = true for instance_name. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1669.695 ; gain = 1288.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v:181]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v:177]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_adder.v:63]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adder'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sum" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sum" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_multiplier.v:62]
 INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
@@ -73,8 +306,324 @@ INFO: [Synth 8-5544] ROM "b_m" won't be mapped to Block RAM because address size
 INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "z_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'multiplier_b_stb_reg' into 'multiplier_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v:93]
+INFO: [Synth 8-4471] merging register 'adder_b_stb_reg' into 'adder_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider_newton.v:76]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divider_newton'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "multiplier_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_a0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "multiplier_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_a0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_divider.v:66]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divider'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dividend" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "z_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "quotient0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dividend" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "z_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "quotient0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_m" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b_m" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'divider_b_stb_reg' into 'divider_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:69]
+INFO: [Synth 8-4471] merging register 'adder_b_stb_reg' into 'adder_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/single_sqrt.v:86]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sqrt'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "divider_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v:181]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v:177]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_adder.v:63]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'double_adder'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sum" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sum" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v:62]
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_m" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b_m" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "z_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'multiplier_b_stb_reg' into 'multiplier_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:93]
+INFO: [Synth 8-4471] merging register 'adder_b_stb_reg' into 'adder_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider_newton.v:76]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'double_divider_newton'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "multiplier_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_output_z_stb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_a0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_input_a_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_input_b_ack" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_s" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "multiplier_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_divider.v:66]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'double_divider'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'divider_b_stb_reg' into 'divider_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:66]
+INFO: [Synth 8-4471] merging register 'adder_b_stb_reg' into 'adder_a_stb_reg' [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_sqrt.v:83]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'double_sqrt'
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'ps_reg' in module 'Main_controllerUnit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                             0000 |                             0000
+                   get_b |                             0001 |                             0001
+                  unpack |                             0010 |                             0010
+           special_cases |                             0011 |                             0011
+                   align |                             0100 |                             0100
+                   add_0 |                             0101 |                             0101
+                   add_1 |                             0110 |                             0110
+             normalise_1 |                             0111 |                             0111
+             normalise_2 |                             1000 |                             1000
+                   round |                             1001 |                             1001
+                    pack |                             1010 |                             1010
+                   put_z |                             1011 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'adder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                      00000000001 |                             0000
+                   get_b |                      00000000010 |                             0001
+                  unpack |                      00000000100 |                             0010
+           special_cases |                      00000001000 |                             0011
+                divide_0 |                      00000010000 |                             0110
+                divide_1 |                      00000100000 |                             0111
+                divide_2 |                      00001000000 |                             1000
+                divide_3 |                      00010000000 |                             1001
+                divide_4 |                      00100000000 |                             1010
+                divide_5 |                      01000000000 |                             1011
+                   put_z |                      10000000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'divider_newton'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                  000000000000001 |                             0000
+                   get_b |                  000000000000010 |                             0001
+                  unpack |                  000000000000100 |                             0010
+           special_cases |                  000000000001000 |                             0011
+             normalise_a |                  000000000010000 |                             0100
+             normalise_b |                  000000000100000 |                             0101
+                divide_0 |                  000000001000000 |                             0110
+                divide_1 |                  000000010000000 |                             0111
+                divide_2 |                  000000100000000 |                             1000
+                divide_3 |                  000001000000000 |                             1001
+             normalise_1 |                  000010000000000 |                             1010
+             normalise_2 |                  000100000000000 |                             1011
+                   round |                  001000000000000 |                             1100
+                    pack |                  010000000000000 |                             1101
+                   put_z |                  100000000000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'divider'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                         00000001 |                             0000
+                  unpack |                         00000010 |                             0010
+           special_cases |                         00000100 |                             0011
+             normalise_a |                         00001000 |                             0100
+                  sqrt_0 |                         00010000 |                             0110
+                  sqrt_1 |                         00100000 |                             0111
+                  sqrt_2 |                         01000000 |                             1000
+                   put_z |                         10000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'sqrt'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                             0000 |                             0000
+                   get_b |                             0001 |                             0001
+                  unpack |                             0010 |                             0010
+           special_cases |                             0011 |                             0011
+                   align |                             0100 |                             0100
+                   add_0 |                             0101 |                             0101
+                   add_1 |                             0110 |                             0110
+             normalise_1 |                             0111 |                             0111
+             normalise_2 |                             1000 |                             1000
+                   round |                             1001 |                             1001
+                    pack |                             1010 |                             1010
+                   put_z |                             1011 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'double_adder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                      00000000001 |                             0000
+                   get_b |                      00000000010 |                             0001
+                  unpack |                      00000000100 |                             0010
+           special_cases |                      00000001000 |                             0011
+                divide_0 |                      00000010000 |                             0110
+                divide_1 |                      00000100000 |                             0111
+                divide_2 |                      00001000000 |                             1000
+                divide_3 |                      00010000000 |                             1001
+                divide_4 |                      00100000000 |                             1010
+                divide_5 |                      01000000000 |                             1011
+                   put_z |                      10000000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'double_divider_newton'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                  000000000000001 |                             0000
+                   get_b |                  000000000000010 |                             0001
+                  unpack |                  000000000000100 |                             0010
+           special_cases |                  000000000001000 |                             0011
+             normalise_a |                  000000000010000 |                             0100
+             normalise_b |                  000000000100000 |                             0101
+                divide_0 |                  000000001000000 |                             0110
+                divide_1 |                  000000010000000 |                             0111
+                divide_2 |                  000000100000000 |                             1000
+                divide_3 |                  000001000000000 |                             1001
+             normalise_1 |                  000010000000000 |                             1010
+             normalise_2 |                  000100000000000 |                             1011
+                   round |                  001000000000000 |                             1100
+                    pack |                  010000000000000 |                             1101
+                   put_z |                  100000000000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'double_divider'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   get_a |                         00000001 |                             0000
+                  unpack |                         00000010 |                             0010
+           special_cases |                         00000100 |                             0011
+             normalise_a |                         00001000 |                             0100
+                  sqrt_0 |                         00010000 |                             0110
+                  sqrt_1 |                         00100000 |                             0111
+                  sqrt_2 |                         01000000 |                             1000
+                   put_z |                         10000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'double_sqrt'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                          0000001 |                              000
+                   fetch |                          0000010 |                              001
+         wait_single_div |                          0000100 |                              010
+        wait_single_sqrt |                          0001000 |                              011
+         wait_double_div |                          0010000 |                              100
+        wait_double_sqrt |                          0100000 |                              101
+              wait_z_stb |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ps_reg' using encoding 'one-hot' in module 'Main_controllerUnit'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 492.688 ; gain = 153.859
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1669.695 ; gain = 1288.930
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -82,38 +631,121 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     24 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 4     
-	   3 Input     10 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
+	   3 Input    109 Bit       Adders := 1     
+	   3 Input     57 Bit       Adders := 2     
+	   2 Input     53 Bit       Adders := 4     
+	   3 Input     51 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     28 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 4     
+	   2 Input     13 Bit       Adders := 22    
+	   3 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 8     
+	   2 Input     10 Bit       Adders := 22    
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 9     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 6     
 +---Registers : 
+	              109 Bit    Registers := 3     
+	              108 Bit    Registers := 1     
+	               64 Bit    Registers := 35    
+	               57 Bit    Registers := 2     
+	               56 Bit    Registers := 4     
+	               53 Bit    Registers := 12    
+	               51 Bit    Registers := 3     
 	               50 Bit    Registers := 1     
-	               32 Bit    Registers := 4     
-	               24 Bit    Registers := 3     
-	               10 Bit    Registers := 3     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 9     
+	               32 Bit    Registers := 35    
+	               28 Bit    Registers := 2     
+	               27 Bit    Registers := 4     
+	               24 Bit    Registers := 12    
+	               13 Bit    Registers := 15    
+	               10 Bit    Registers := 15    
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 104   
++---Multipliers : 
+	                53x53  Multipliers := 1     
 +---Muxes : 
+	  15 Input    109 Bit        Muxes := 4     
+	   2 Input     64 Bit        Muxes := 18    
+	  12 Input     64 Bit        Muxes := 2     
+	  14 Input     64 Bit        Muxes := 1     
+	  11 Input     64 Bit        Muxes := 7     
+	  15 Input     64 Bit        Muxes := 1     
+	   8 Input     64 Bit        Muxes := 2     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 4     
+	   2 Input     56 Bit        Muxes := 6     
+	  12 Input     56 Bit        Muxes := 8     
+	   2 Input     53 Bit        Muxes := 6     
+	  12 Input     53 Bit        Muxes := 2     
+	  14 Input     53 Bit        Muxes := 4     
+	  15 Input     53 Bit        Muxes := 6     
+	  11 Input     53 Bit        Muxes := 4     
+	   8 Input     53 Bit        Muxes := 2     
+	  15 Input     51 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 19    
+	  12 Input     32 Bit        Muxes := 2     
 	  14 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 6     
+	  11 Input     32 Bit        Muxes := 7     
+	  15 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 2     
+	   2 Input     28 Bit        Muxes := 4     
+	   2 Input     27 Bit        Muxes := 6     
+	  12 Input     27 Bit        Muxes := 8     
+	   2 Input     24 Bit        Muxes := 6     
+	  12 Input     24 Bit        Muxes := 2     
 	  14 Input     24 Bit        Muxes := 4     
-	   2 Input     24 Bit        Muxes := 1     
-	  15 Input     24 Bit        Muxes := 1     
+	  15 Input     24 Bit        Muxes := 6     
+	  11 Input     24 Bit        Muxes := 4     
+	   8 Input     24 Bit        Muxes := 2     
+	  23 Input     15 Bit        Muxes := 2     
+	  15 Input     14 Bit        Muxes := 1     
+	  12 Input     13 Bit        Muxes := 6     
+	  14 Input     13 Bit        Muxes := 4     
+	  11 Input     13 Bit        Muxes := 2     
+	  15 Input     13 Bit        Muxes := 4     
+	   8 Input     13 Bit        Muxes := 1     
+	  19 Input     11 Bit        Muxes := 2     
+	  15 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 4     
+	  12 Input     10 Bit        Muxes := 6     
 	  14 Input     10 Bit        Muxes := 4     
-	   2 Input      8 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	  14 Input      1 Bit        Muxes := 16    
-	   2 Input      1 Bit        Muxes := 13    
-	   5 Input      1 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 2     
+	  15 Input     10 Bit        Muxes := 4     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	  14 Input      8 Bit        Muxes := 2     
+	  15 Input      7 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 6     
+	   5 Input      7 Bit        Muxes := 1     
+	  15 Input      6 Bit        Muxes := 1     
+	  19 Input      4 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	  12 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 156   
+	   6 Input      1 Bit        Muxes := 8     
+	  12 Input      1 Bit        Muxes := 72    
+	  14 Input      1 Bit        Muxes := 32    
+	   5 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 18    
+	  15 Input      1 Bit        Muxes := 32    
+	   8 Input      1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -121,6 +753,40 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module Main_vivado 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     28 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               28 Bit    Registers := 1     
+	               27 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	  12 Input     32 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 2     
+	   2 Input     27 Bit        Muxes := 3     
+	  12 Input     27 Bit        Muxes := 4     
+	   2 Input     24 Bit        Muxes := 1     
+	  12 Input     24 Bit        Muxes := 1     
+	  12 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	  19 Input      4 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+	   6 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 18    
 Module multiplier 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -150,6 +816,227 @@ Detailed RTL Component Info :
 	  14 Input      1 Bit        Muxes := 16    
 	   2 Input      1 Bit        Muxes := 13    
 	   5 Input      1 Bit        Muxes := 1     
+Module divider_newton 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 10    
+	               24 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	  11 Input     32 Bit        Muxes := 7     
+	  11 Input     24 Bit        Muxes := 4     
+	  19 Input     11 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 9     
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     51 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               51 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
+	               24 Bit    Registers := 4     
+	               10 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	  15 Input     51 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 3     
+	  15 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	  15 Input     24 Bit        Muxes := 5     
+	  23 Input     15 Bit        Muxes := 1     
+	  15 Input     11 Bit        Muxes := 1     
+	  15 Input     10 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 1     
+	  15 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   6 Input      1 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 16    
+Module sqrt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   8 Input     24 Bit        Muxes := 2     
+	   8 Input     10 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 7     
+Module double_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     57 Bit       Adders := 1     
+	   2 Input     53 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 5     
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 4     
+	               57 Bit    Registers := 1     
+	               56 Bit    Registers := 2     
+	               53 Bit    Registers := 1     
+	               13 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	  12 Input     64 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 2     
+	   2 Input     56 Bit        Muxes := 3     
+	  12 Input     56 Bit        Muxes := 4     
+	   2 Input     53 Bit        Muxes := 1     
+	  12 Input     53 Bit        Muxes := 1     
+	  12 Input     13 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 1     
+	  19 Input      4 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   6 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 18    
+Module double_multiplier 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     53 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 4     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              108 Bit    Registers := 1     
+	               64 Bit    Registers := 4     
+	               53 Bit    Registers := 3     
+	               13 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Multipliers : 
+	                53x53  Multipliers := 1     
++---Muxes : 
+	  14 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 6     
+	  14 Input     53 Bit        Muxes := 4     
+	   2 Input     53 Bit        Muxes := 1     
+	  15 Input     53 Bit        Muxes := 1     
+	  14 Input     13 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 12    
+	   5 Input      1 Bit        Muxes := 1     
+Module double_divider_newton 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 10    
+	               53 Bit    Registers := 2     
+	               13 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	  11 Input     64 Bit        Muxes := 7     
+	  11 Input     53 Bit        Muxes := 4     
+	  11 Input     13 Bit        Muxes := 2     
+	  19 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 9     
+Module double_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    109 Bit       Adders := 1     
+	   2 Input     53 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              109 Bit    Registers := 3     
+	               64 Bit    Registers := 4     
+	               53 Bit    Registers := 4     
+	               13 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	  15 Input    109 Bit        Muxes := 4     
+	   2 Input     64 Bit        Muxes := 3     
+	  15 Input     64 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 2     
+	  15 Input     53 Bit        Muxes := 5     
+	  23 Input     15 Bit        Muxes := 1     
+	  15 Input     14 Bit        Muxes := 1     
+	  15 Input     13 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 1     
+	  15 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   6 Input      1 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 16    
+Module double_sqrt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 9     
+	               53 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   8 Input     64 Bit        Muxes := 2     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   8 Input     53 Bit        Muxes := 2     
+	   8 Input     13 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 6     
+Module Main_controllerUnit 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 6     
+	   5 Input      7 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -162,36 +1049,291 @@ BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "multiplier_39759952/b_m" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "multiplier_39759952/a_e" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "multiplier_39759952/b_e" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "multiplier_39759952/a_m" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "multiplier_39759952/z_e" won't be mapped to RAM because it is too sparse
-DSP Report: Generating DSP multiplier_39759952/product1, operation Mode is: A*B.
-DSP Report: operator multiplier_39759952/product1 is absorbed into DSP multiplier_39759952/product1.
-DSP Report: operator multiplier_39759952/product1 is absorbed into DSP multiplier_39759952/product1.
-DSP Report: Generating DSP multiplier_39759952/product1, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator multiplier_39759952/product1 is absorbed into DSP multiplier_39759952/product1.
-DSP Report: operator multiplier_39759952/product1 is absorbed into DSP multiplier_39759952/product1.
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP product1, operation Mode is: A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+INFO: [Synth 8-5546] ROM "a_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_m" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "z_e" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b_e" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 10 [F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/ModelSim/double_multiplier.v:185]
+DSP Report: Generating DSP product1, operation Mode is: A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: PCIN+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: PCIN+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: PCIN+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: Generating DSP product1, operation Mode is: PCIN+A*B.
+DSP Report: operator product1 is absorbed into DSP product1.
+DSP Report: operator product1 is absorbed into DSP product1.
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "z_e" won't be mapped to RAM because address size (53) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (single_divider_newton_instance/\adder_b_reg[31] )
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[31]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[31]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/multiplier_0/product_reg[0]' (FDE) to 'double_divider_newton_instance/multiplier_0/product_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_divider_newton_instance/multiplier_0/\product_reg[1] )
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[22]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[21]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[20]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[19]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[18]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[17]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[16]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[15]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[14]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[13]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[12]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[11]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[10]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[9]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[8]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[7]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[6]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[5]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[4]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[3]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[2]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[1]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[0]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[29]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[28]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[27]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[26]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[25]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_a_reg[24]' (FDRE) to 'single_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_divider_newton_instance/\adder_a_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (single_divider_newton_instance/\adder_a_reg[30] )
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/multiplier_0/product_reg[0]' (FDE) to 'single_divider_newton_instance/multiplier_0/product_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_divider_newton_instance/\multiplier_0/product_reg[1] )
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[22]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[21]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[20]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[19]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[18]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[17]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[16]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[15]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[14]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[13]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[12]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[11]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[10]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[9]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[8]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[7]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[6]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[5]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[4]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[3]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[2]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[1]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[0]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[29]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[28]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[27]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[26]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[25]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'single_divider_newton_instance/adder_0/a_reg[24]' (FDE) to 'single_divider_newton_instance/adder_0/a_reg[23]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (double_divider_newton_instance/\adder_b_reg[63] )
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[0]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[1]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[1]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[2]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[2]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[3]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[3]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[4]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[4]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[5]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[5]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[6]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[7]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[8]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[8]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[9]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[9]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[10]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[10]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[11]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[11]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[12]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[12]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[13]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[13]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[14]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[14]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[15]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[15]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[16]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[16]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[17]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[17]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[18]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[18]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[19]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[19]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[20]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[20]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[21]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[21]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[22]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[22]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[23]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[24]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[24]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[25]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[25]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[26]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[26]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[27]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[27]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[28]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[28]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[29]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[29]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[30]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[30]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[31]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[31]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[32]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[32]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[33]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[33]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[34]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[34]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[35]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[35]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[36]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[36]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[37]'
+INFO: [Synth 8-3886] merging instance 'double_divider_newton_instance/adder_a_reg[37]' (FDRE) to 'double_divider_newton_instance/adder_a_reg[38]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (double_divider_newton_instance/\adder_a_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_divider_newton_instance/\adder_a_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (single_divider_newton_instance/\adder_0/b_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_divider_newton_instance/\adder_0/a_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (single_divider_newton_instance/\adder_0/a_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (single_divider_newton_instance/\adder_0/b_s_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_divider_newton_instance/\adder_0/a_s_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (single_sqrt_instance/\divider_0/dividend_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_sqrt_instance/divider_0/\dividend_reg[55] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (double_divider_newton_instance/adder_0/\b_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (double_divider_newton_instance/adder_0/\a_reg[52] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (double_divider_newton_instance/adder_0/\a_reg[62] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (double_divider_newton_instance/adder_0/b_s_reg)
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1669.695 ; gain = 1288.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping  Report (see note below)
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|multiplier  | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multiplier  | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier        | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier        | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | A*B            | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | PCIN+A*B       | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | (PCIN>>17)+A*B | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | A*B            | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | PCIN+A*B       | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | (PCIN>>17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|double_multiplier | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -203,12 +1345,19 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/clk_out1' to pin 'instance_name/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 2115.727 ; gain = 1734.961
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 2186.012 ; gain = 1805.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,7 +1369,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Technology Mapping : Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,7 +1393,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished IO Insertion : Time (s): cpu = 00:01:37 ; elapsed = 00:01:41 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -257,7 +1406,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:37 ; elapsed = 00:01:41 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,68 +1418,123 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:38 ; elapsed = 00:01:42 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:01:42 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:39 ; elapsed = 00:01:42 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:01:43 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |clk_wiz_0       |     1|
+|2     |CARRY8          |   171|
+|3     |DSP_ALU         |    11|
+|4     |DSP_A_B_DATA    |     6|
+|5     |DSP_A_B_DATA_1  |     1|
+|6     |DSP_A_B_DATA_2  |     4|
+|7     |DSP_C_DATA      |    11|
+|8     |DSP_MULTIPLIER  |    11|
+|9     |DSP_M_DATA      |    11|
+|10    |DSP_OUTPUT      |    10|
+|11    |DSP_OUTPUT_1    |     1|
+|12    |DSP_PREADD      |    11|
+|13    |DSP_PREADD_DATA |    11|
+|14    |LUT1            |   119|
+|15    |LUT2            |   656|
+|16    |LUT3            |  1015|
+|17    |LUT4            |  1710|
+|18    |LUT5            |  1462|
+|19    |LUT6            |  1047|
+|20    |MUXF7           |     5|
+|21    |FDCE            |     8|
+|22    |FDPE            |     1|
+|23    |FDRE            |  5524|
+|24    |FDSE            |    81|
+|25    |IBUF            |   198|
+|26    |OBUF            |    99|
++------+----------------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     0|
-+------+---------+-------+------+
++------+---------------------------------+----------------------------------+------+
+|      |Instance                         |Module                            |Cells |
++------+---------------------------------+----------------------------------+------+
+|1     |top                              |                                  | 12186|
+|2     |  Controller_unit_instance       |Main_controllerUnit               |    16|
+|3     |  double_divider_newton_instance |double_divider_newton             |  3768|
+|4     |    adder_0                      |double_adder_1                    |  1314|
+|5     |    multiplier_0                 |double_multiplier                 |  1309|
+|6     |      product1                   |\multiplier_0/product1_funnel__1  |     8|
+|7     |      product1__0                |\multiplier_0/product1_funnel__2  |     8|
+|8     |      product1__1                |\multiplier_0/product1_funnel__3  |     8|
+|9     |      product1__2                |\multiplier_0/product1_funnel__4  |     8|
+|10    |      product1__3                |product1__3_funnel                |     8|
+|11    |      product1__4                |\multiplier_0/product1_funnel__5  |     8|
+|12    |      product1__5                |product1__3_funnel__1             |     8|
+|13    |      product1__6                |product1__3_funnel__2             |     8|
+|14    |      product1__7                |product1__3_funnel__3             |     8|
+|15    |  double_sqrt_instance           |double_sqrt                       |  4048|
+|16    |    adder_0                      |double_adder                      |  1503|
+|17    |    divider_0                    |double_divider                    |  1690|
+|18    |  single_divider_newton_instance |divider_newton                    |  1883|
+|19    |    adder_0                      |adder_0                           |   716|
+|20    |    multiplier_0                 |multiplier                        |   557|
+|21    |      product1                   |\multiplier_0/product1_funnel     |     8|
+|22    |      product1__0                |\multiplier_0/product1__0_funnel  |     8|
+|23    |  single_sqrt_instance           |sqrt                              |  2172|
+|24    |    adder_0                      |adder                             |   831|
+|25    |    divider_0                    |divider                           |   877|
++------+---------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:01:43 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1532.105 ; gain = 1193.277
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:31 . Memory (MB): peak = 2247.383 ; gain = 759.742
+Synthesis Optimization Complete : Time (s): cpu = 00:01:39 ; elapsed = 00:01:43 . Memory (MB): peak = 2247.383 ; gain = 1866.617
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 385 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1532.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2253.402 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 209 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 11 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 198 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+502 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1532.105 ; gain = 1206.414
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1532.105 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:47 . Memory (MB): peak = 2253.402 ; gain = 1872.844
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2253.402 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1/multiplierTB.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file multiplierTB_utilization_synth.rpt -pb multiplierTB_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan  9 11:25:47 2020...
+INFO: [Common 17-1381] The checkpoint 'F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1/Main_vivado.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Main_vivado_utilization_synth.rpt -pb Main_vivado_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 16 22:07:04 2020...

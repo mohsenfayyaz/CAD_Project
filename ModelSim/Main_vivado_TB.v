@@ -1,0 +1,149 @@
+//IEEE Floating Point Integration Test
+//Copyright (C) Mohsen Fayyaz 2019 "mohsenfayyaz.ir"
+//2019-1-15
+//
+`timescale 1ns/1ns 
+`include "defines.v"
+
+module Main_vivado_TB();
+  reg clk=0, rst=1;
+  reg[31:0] a_single, b_single;
+  reg[63:0] a_double, b_double;
+  wire[31:0] z_single;
+  wire[63:0] z_double;
+  reg a_stb, b_stb, z_ack;
+  wire a_ack, b_ack, z_stb;
+  reg[1:0] process;
+  
+  integer fd;
+  
+  always #5 clk = ~clk;  // 50MHz
+  
+  Main_vivado main_vivado(
+        .input_as(a_single),
+        .input_bs(b_single),
+        .input_ad(a_double),
+        .input_bd(b_double),
+        .input_a_stb(a_stb),
+        .input_b_stb(b_stb),
+        .output_z_ack(z_ack),
+        .process(process),
+        .fpga_clk(clk),
+        .rst(rst),
+        .output_zs(z_single),
+        .output_zd(z_double),
+        .output_z_stb(z_stb),
+        .input_a_ack(a_ack),
+        .input_b_ack(b_ack));
+
+  initial begin
+    process = `PROCESS_SINGLE_DIVIDER;
+    fd = $fopen(`VIVADO_SINGLE_DIVIDER_OUTPUT_FILE_NAME,"w");
+    {a_single, b_single, a_stb, b_stb} = 0;
+    rst = 1;
+    #1000
+    rst = 0;
+    #1000
+    repeat(10) begin
+    z_ack = 0;
+    //a = 32'b10111111100000000000000000000000;  //-1
+    //b = 32'b01000000000000000000000000000000;  //2
+    a_single = $random;
+    a_stb = 1;
+    b_single = $random;
+    b_stb = 1;
+    #100;
+    a_stb = 0;
+    b_stb = 0;
+    while(!z_stb)
+      #500;
+    #1000;
+    $fwrite(fd, "%b %b %b\n", a_single, b_single, z_single);  //Unsigned Integer
+    z_ack = 1;
+    # 100;
+    end
+    $fclose(fd);  
+    $display("File Created: %s", `VIVADO_SINGLE_DIVIDER_OUTPUT_FILE_NAME);
+    
+    
+    process = `PROCESS_SINGLE_SQRT;
+    fd = $fopen(`VIVADO_SINGLE_SQRT_OUTPUT_FILE_NAME,"w");
+    {a_single, b_single} = 0;
+    #1000
+    repeat(10) begin
+    z_ack = 0;
+    //a = 32'b10111111100000000000000000000000;  //-1
+    //b = 32'b01000000000000000000000000000000;  //2
+    a_single = $random;
+    a_stb = 1;
+    #100;
+    a_stb = 0;
+    while(!z_stb)
+      #500;
+    #1000;
+    $fwrite(fd, "%b %b\n", a_single, z_single);  //Unsigned Integer
+    z_ack = 1;
+    # 100;
+    end
+    $fclose(fd);  
+    $display("File Created: %s", `VIVADO_SINGLE_SQRT_OUTPUT_FILE_NAME);
+    
+    
+    process = `PROCESS_DOUBLE_DIVIDER;
+    fd = $fopen(`VIVADO_DOUBLE_DIVIDER_OUTPUT_FILE_NAME,"w");
+    {a_double, b_double} = 0;
+    #1000
+    repeat(10) begin
+    z_ack = 0;
+    //a = 32'b10111111100000000000000000000000;  //-1
+    //b = 32'b01000000000000000000000000000000;  //2
+    a_double[63:32] = $random;  // $random gives at most 32 bit
+    a_double[31:0] = $random;
+    a_stb = 1;
+    b_double[63:32] = $random;  // $random gives at most 32 bit
+    b_double[31:0] = $random;
+    b_stb = 1;
+    #100;
+    #100;
+    a_stb = 0;
+    b_stb = 0;
+    while(!z_stb)
+      #500;
+    #1000;
+    $fwrite(fd, "%b %b %b\n", a_double, b_double, z_double);  //Unsigned Integer
+    z_ack = 1;
+    # 100;
+    end
+    $fclose(fd);  
+    $display("File Created: %s", `VIVADO_DOUBLE_DIVIDER_OUTPUT_FILE_NAME);
+    
+    
+    process = `PROCESS_DOUBLE_SQRT;
+    fd = $fopen(`VIVADO_DOUBLE_SQRT_OUTPUT_FILE_NAME,"w");
+    {a_double, b_double} = 0;
+    #1000
+    repeat(10) begin
+    z_ack = 0;
+    //a = 32'b10111111100000000000000000000000;  //-1
+    //b = 32'b01000000000000000000000000000000;  //2
+    a_double[63:32] = $random;  // $random gives at most 32 bit
+    a_double[31:0] = $random;
+    a_stb = 1;
+    #100;
+    a_stb = 0;
+    while(!z_stb)
+      #500;
+    #1000;
+    $fwrite(fd, "%b %b\n", a_double, z_double);  //Unsigned Integer
+    z_ack = 1;
+    # 100;
+    end
+    $fclose(fd);
+    $display("File Created: %s", `VIVADO_DOUBLE_SQRT_OUTPUT_FILE_NAME);
+    
+    
+    $stop;
+  end
+
+endmodule
+

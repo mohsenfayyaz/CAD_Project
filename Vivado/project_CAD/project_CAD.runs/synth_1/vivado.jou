@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Jan  9 11:25:25 2020
-# Process ID: 8764
+# Start of session at: Thu Jan 16 22:05:08 2020
+# Process ID: 14132
 # Current directory: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1
-# Command line: vivado.exe -log multiplierTB.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source multiplierTB.tcl
-# Log file: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1/multiplierTB.vds
+# Command line: vivado.exe -log Main_vivado.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_vivado.tcl
+# Log file: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1/Main_vivado.vds
 # Journal file: F:/Programming/University/05_Computer Aided Digital System Design/CAD_Project/Vivado/project_CAD/project_CAD.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source multiplierTB.tcl -notrace
+source Main_vivado.tcl -notrace

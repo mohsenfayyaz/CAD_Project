@@ -1,0 +1,92 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jan 16 22:10:58 2020
+| Host         : DESKTOP-FEIK2JA running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Main_vivado_methodology_drc_routed.rpt -pb Main_vivado_methodology_drc_routed.pb -rpx Main_vivado_methodology_drc_routed.rpx
+| Design       : Main_vivado
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 11
++----------+----------+---------------------------+------------+
+| Rule     | Severity | Description               | Violations |
++----------+----------+---------------------------+------------+
+| SYNTH-10 | Warning  | Wide multiplier           | 8          |
+| SYNTH-11 | Warning  | DSP output not registered | 2          |
+| SYNTH-12 | Warning  | DSP input not registered  | 1          |
++----------+----------+---------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1 of size 18x20, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__0 of size 20x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__2 of size 18x20, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__3 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__4 of size 20x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__5 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#7 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__6 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#8 Warning
+Wide multiplier  
+Detected multiplier at double_divider_newton_instance/multiplier_0/product1__7 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-11#1 Warning
+DSP output not registered  
+DSP instance double_divider_newton_instance/multiplier_0/product1__1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#2 Warning
+DSP output not registered  
+DSP instance single_divider_newton_instance/multiplier_0/product1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-12#1 Warning
+DSP input not registered  
+DSP instance single_divider_newton_instance/multiplier_0/product1__0 is not fully pipelined on the input side. AREG/BREG/CREG/DREG are not used.
+Related violations: <none>
+
+

@@ -1,0 +1,2132 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date              : Thu Jan 16 22:11:03 2020
+| Host              : DESKTOP-FEIK2JA running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 10 -file Main_vivado_timing_summary_routed.rpt -pb Main_vivado_timing_summary_routed.pb -rpx Main_vivado_timing_summary_routed.rpx -warn_on_violation
+| Design            : Main_vivado
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.23 10-29-2018
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 198 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 99 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.003        0.000                      0                12014        0.010        0.000                      0                12014        1.808        0.000                       0                  5618  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                 Waveform(ns)         Period(ns)      Frequency(MHz)
+-----                 ------------         ----------      --------------
+fpga_clk              {0.000 5.000}        10.000          100.000         
+  clk_out1_clk_wiz_0  {0.000 2.083}        4.167           240.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+fpga_clk                                                                                                                                                                2.000        0.000                       0                     1  
+  clk_out1_clk_wiz_0        0.003        0.000                      0                12014        0.010        0.000                      0                12014        1.808        0.000                       0                  5617  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  fpga_clk
+  To Clock:  fpga_clk
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        2.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         fpga_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { fpga_clk }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location   Pin
+Min Period        n/a     MMCME4_ADV/CLKIN1  n/a            1.071         10.000      8.929      MMCM_X1Y5  instance_name/inst/mmcme4_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME4_ADV/CLKIN1  n/a            3.000         5.000       2.000      MMCM_X1Y5  instance_name/inst/mmcme4_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME4_ADV/CLKIN1  n/a            3.000         5.000       2.000      MMCM_X1Y5  instance_name/inst/mmcme4_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME4_ADV/CLKIN1  n/a            3.000         5.000       2.000      MMCM_X1Y5  instance_name/inst/mmcme4_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME4_ADV/CLKIN1  n/a            3.000         5.000       2.000      MMCM_X1Y5  instance_name/inst/mmcme4_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_clk_wiz_0
+  To Clock:  clk_out1_clk_wiz_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.003ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.010ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        1.808ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.003ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[66]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.029ns  (logic 3.327ns (82.576%)  route 0.702ns (17.424%))
+  Logic Levels:           15  (CARRY8=4 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT2=1)
+  Clock Path Skew:        -0.099ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.067ns = ( 7.234 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.588ns (routing 0.870ns, distribution 0.718ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[2]
+                         net (fo=1, routed)           0.255     6.370    double_divider_newton_instance/multiplier_0/product1__4_n_103
+    SLICE_X53Y290        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.088     6.458 r  double_divider_newton_instance/multiplier_0/product[42]_i_6/O
+                         net (fo=1, routed)           0.025     6.483    double_divider_newton_instance/multiplier_0/product[42]_i_6_n_0
+    SLICE_X53Y290        CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     6.646 r  double_divider_newton_instance/multiplier_0/product_reg[42]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.672    double_divider_newton_instance/multiplier_0/product_reg[42]_i_1_n_0
+    SLICE_X53Y291        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.687 r  double_divider_newton_instance/multiplier_0/product_reg[50]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.713    double_divider_newton_instance/multiplier_0/product_reg[50]_i_1_n_0
+    SLICE_X53Y292        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.728 r  double_divider_newton_instance/multiplier_0/product_reg[58]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.754    double_divider_newton_instance/multiplier_0/product_reg[58]_i_1_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_CI_O[7])
+                                                      0.116     6.870 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/O[7]
+                         net (fo=1, routed)           0.026     6.896    double_divider_newton_instance/multiplier_0/product0[66]
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[66]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.588     7.234    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[66]/C
+                         clock pessimism             -0.300     6.934    
+                         clock uncertainty           -0.061     6.874    
+    SLICE_X53Y293        FDRE (Setup_HFF_SLICEM_C_D)
+                                                      0.025     6.899    double_divider_newton_instance/multiplier_0/product_reg[66]
+  -------------------------------------------------------------------
+                         required time                          6.899    
+                         arrival time                          -6.896    
+  -------------------------------------------------------------------
+                         slack                                  0.003    
+
+Slack (MET) :             0.004ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[64]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.028ns  (logic 3.327ns (82.597%)  route 0.701ns (17.403%))
+  Logic Levels:           15  (CARRY8=4 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT2=1)
+  Clock Path Skew:        -0.099ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.067ns = ( 7.234 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.588ns (routing 0.870ns, distribution 0.718ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[2]
+                         net (fo=1, routed)           0.255     6.370    double_divider_newton_instance/multiplier_0/product1__4_n_103
+    SLICE_X53Y290        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.088     6.458 r  double_divider_newton_instance/multiplier_0/product[42]_i_6/O
+                         net (fo=1, routed)           0.025     6.483    double_divider_newton_instance/multiplier_0/product[42]_i_6_n_0
+    SLICE_X53Y290        CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     6.646 r  double_divider_newton_instance/multiplier_0/product_reg[42]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.672    double_divider_newton_instance/multiplier_0/product_reg[42]_i_1_n_0
+    SLICE_X53Y291        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.687 r  double_divider_newton_instance/multiplier_0/product_reg[50]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.713    double_divider_newton_instance/multiplier_0/product_reg[50]_i_1_n_0
+    SLICE_X53Y292        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.728 r  double_divider_newton_instance/multiplier_0/product_reg[58]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.754    double_divider_newton_instance/multiplier_0/product_reg[58]_i_1_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_CI_O[5])
+                                                      0.116     6.870 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/O[5]
+                         net (fo=1, routed)           0.025     6.895    double_divider_newton_instance/multiplier_0/product0[64]
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[64]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.588     7.234    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[64]/C
+                         clock pessimism             -0.300     6.934    
+                         clock uncertainty           -0.061     6.874    
+    SLICE_X53Y293        FDRE (Setup_FFF_SLICEM_C_D)
+                                                      0.025     6.899    double_divider_newton_instance/multiplier_0/product_reg[64]
+  -------------------------------------------------------------------
+                         required time                          6.899    
+                         arrival time                          -6.895    
+  -------------------------------------------------------------------
+                         slack                                  0.004    
+
+Slack (MET) :             0.016ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[65]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.016ns  (logic 3.314ns (82.520%)  route 0.702ns (17.480%))
+  Logic Levels:           15  (CARRY8=4 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT2=1)
+  Clock Path Skew:        -0.099ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.067ns = ( 7.234 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.588ns (routing 0.870ns, distribution 0.718ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[2]
+                         net (fo=1, routed)           0.255     6.370    double_divider_newton_instance/multiplier_0/product1__4_n_103
+    SLICE_X53Y290        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.088     6.458 r  double_divider_newton_instance/multiplier_0/product[42]_i_6/O
+                         net (fo=1, routed)           0.025     6.483    double_divider_newton_instance/multiplier_0/product[42]_i_6_n_0
+    SLICE_X53Y290        CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     6.646 r  double_divider_newton_instance/multiplier_0/product_reg[42]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.672    double_divider_newton_instance/multiplier_0/product_reg[42]_i_1_n_0
+    SLICE_X53Y291        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.687 r  double_divider_newton_instance/multiplier_0/product_reg[50]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.713    double_divider_newton_instance/multiplier_0/product_reg[50]_i_1_n_0
+    SLICE_X53Y292        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.728 r  double_divider_newton_instance/multiplier_0/product_reg[58]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.754    double_divider_newton_instance/multiplier_0/product_reg[58]_i_1_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_CI_O[6])
+                                                      0.103     6.857 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/O[6]
+                         net (fo=1, routed)           0.026     6.883    double_divider_newton_instance/multiplier_0/product0[65]
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[65]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.588     7.234    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[65]/C
+                         clock pessimism             -0.300     6.934    
+                         clock uncertainty           -0.061     6.874    
+    SLICE_X53Y293        FDRE (Setup_GFF_SLICEM_C_D)
+                                                      0.025     6.899    double_divider_newton_instance/multiplier_0/product_reg[65]
+  -------------------------------------------------------------------
+                         required time                          6.899    
+                         arrival time                          -6.883    
+  -------------------------------------------------------------------
+                         slack                                  0.016    
+
+Slack (MET) :             0.026ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[70]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.051ns  (logic 3.184ns (78.598%)  route 0.867ns (21.402%))
+  Logic Levels:           13  (CARRY8=2 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT3=1)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.112ns = ( 7.279 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.633ns (routing 0.870ns, distribution 0.763ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[23])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[23]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<23>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[23]_P[23])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[23]
+                         net (fo=3, routed)           0.245     6.360    double_divider_newton_instance/multiplier_0/product1__4_n_82
+    SLICE_X54Y293        LUT3 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.052     6.412 r  double_divider_newton_instance/multiplier_0/product[66]_i_8/O
+                         net (fo=1, routed)           0.252     6.664    double_divider_newton_instance/multiplier_0/product[66]_i_8_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_DI[1]_CO[7])
+                                                      0.120     6.784 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.810    double_divider_newton_instance/multiplier_0/product_reg[66]_i_1_n_0
+    SLICE_X53Y294        CARRY8 (Prop_CARRY8_SLICEM_CI_O[3])
+                                                      0.082     6.892 r  double_divider_newton_instance/multiplier_0/product_reg[74]_i_1/O[3]
+                         net (fo=1, routed)           0.026     6.918    double_divider_newton_instance/multiplier_0/product0[70]
+    SLICE_X53Y294        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[70]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.633     7.279    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y294        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[70]/C
+                         clock pessimism             -0.300     6.979    
+                         clock uncertainty           -0.061     6.919    
+    SLICE_X53Y294        FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.025     6.944    double_divider_newton_instance/multiplier_0/product_reg[70]
+  -------------------------------------------------------------------
+                         required time                          6.944    
+                         arrival time                          -6.918    
+  -------------------------------------------------------------------
+                         slack                                  0.026    
+
+Slack (MET) :             0.029ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[51]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[86]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.202ns  (logic 3.293ns (78.367%)  route 0.909ns (21.633%))
+  Logic Levels:           14  (CARRY8=3 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT6=1)
+  Clock Path Skew:        0.100ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.257ns = ( 7.424 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.857ns
+    Clock Pessimism Removal (CPR):    -0.301ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.799ns (routing 0.957ns, distribution 0.842ns)
+  Clock Net Delay (Destination): 1.778ns (routing 0.870ns, distribution 0.908ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.799     2.857    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X56Y287        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[51]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y287        FDRE (Prop_CFF2_SLICEM_C_Q)
+                                                      0.077     2.934 f  double_divider_newton_instance/multiplier_0/b_m_reg[51]/Q
+                         net (fo=8, routed)           0.334     3.268    double_divider_newton_instance/multiplier_0/product1/A[17]
+    DSP48E2_X5Y117       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[17]_A2_DATA[17])
+                                                      0.192     3.460 r  double_divider_newton_instance/multiplier_0/product1/DSP_A_B_DATA_INST/A2_DATA[17]
+                         net (fo=1, routed)           0.000     3.460    double_divider_newton_instance/multiplier_0/product1/DSP_A_B_DATA.A2_DATA<17>
+    DSP48E2_X5Y117       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[17]_A2A1[17])
+                                                      0.076     3.536 r  double_divider_newton_instance/multiplier_0/product1/DSP_PREADD_DATA_INST/A2A1[17]
+                         net (fo=1, routed)           0.000     3.536    double_divider_newton_instance/multiplier_0/product1/DSP_PREADD_DATA.A2A1<17>
+    DSP48E2_X5Y117       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[17]_U[37])
+                                                      0.505     4.041 f  double_divider_newton_instance/multiplier_0/product1/DSP_MULTIPLIER_INST/U[37]
+                         net (fo=1, routed)           0.000     4.041    double_divider_newton_instance/multiplier_0/product1/DSP_MULTIPLIER.U<37>
+    DSP48E2_X5Y117       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[37]_U_DATA[37])
+                                                      0.047     4.088 r  double_divider_newton_instance/multiplier_0/product1/DSP_M_DATA_INST/U_DATA[37]
+                         net (fo=1, routed)           0.000     4.088    double_divider_newton_instance/multiplier_0/product1/DSP_M_DATA.U_DATA<37>
+    DSP48E2_X5Y117       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[37]_ALU_OUT[47])
+                                                      0.585     4.673 f  double_divider_newton_instance/multiplier_0/product1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.673    double_divider_newton_instance/multiplier_0/product1/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y117       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.795 r  double_divider_newton_instance/multiplier_0/product1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     4.833    double_divider_newton_instance/multiplier_0/product1__0/PCIN[47]
+    DSP48E2_X5Y118       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.379 f  double_divider_newton_instance/multiplier_0/product1__0/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.379    double_divider_newton_instance/multiplier_0/product1__0/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y118       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.501 r  double_divider_newton_instance/multiplier_0/product1__0/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     5.515    double_divider_newton_instance/multiplier_0/product1__1/PCIN[47]
+    DSP48E2_X5Y119       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[4])
+                                                      0.546     6.061 f  double_divider_newton_instance/multiplier_0/product1__1/DSP_ALU_INST/ALU_OUT[4]
+                         net (fo=1, routed)           0.000     6.061    double_divider_newton_instance/multiplier_0/product1__1/DSP_ALU.ALU_OUT<4>
+    DSP48E2_X5Y119       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[4]_P[4])
+                                                      0.109     6.170 r  double_divider_newton_instance/multiplier_0/product1__1/DSP_OUTPUT_INST/P[4]
+                         net (fo=5, routed)           0.430     6.600    double_divider_newton_instance/multiplier_0/product1__1_n_101
+    SLICE_X53Y294        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.152     6.752 r  double_divider_newton_instance/multiplier_0/product[74]_i_10/O
+                         net (fo=1, routed)           0.015     6.767    double_divider_newton_instance/multiplier_0/product[74]_i_10_n_0
+    SLICE_X53Y294        CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.117     6.884 r  double_divider_newton_instance/multiplier_0/product_reg[74]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.910    double_divider_newton_instance/multiplier_0/product_reg[74]_i_1_n_0
+    SLICE_X53Y295        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.925 r  double_divider_newton_instance/multiplier_0/product_reg[82]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.951    double_divider_newton_instance/multiplier_0/product_reg[82]_i_1_n_0
+    SLICE_X53Y296        CARRY8 (Prop_CARRY8_SLICEM_CI_O[3])
+                                                      0.082     7.033 r  double_divider_newton_instance/multiplier_0/product_reg[90]_i_1/O[3]
+                         net (fo=1, routed)           0.026     7.059    double_divider_newton_instance/multiplier_0/product0[86]
+    SLICE_X53Y296        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[86]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.778     7.424    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y296        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[86]/C
+                         clock pessimism             -0.301     7.124    
+                         clock uncertainty           -0.061     7.063    
+    SLICE_X53Y296        FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.025     7.088    double_divider_newton_instance/multiplier_0/product_reg[86]
+  -------------------------------------------------------------------
+                         required time                          7.088    
+                         arrival time                          -7.059    
+  -------------------------------------------------------------------
+                         slack                                  0.029    
+
+Slack (MET) :             0.033ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[68]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.044ns  (logic 3.178ns (78.586%)  route 0.866ns (21.414%))
+  Logic Levels:           13  (CARRY8=2 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT3=1)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.112ns = ( 7.279 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.633ns (routing 0.870ns, distribution 0.763ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[23])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[23]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<23>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[23]_P[23])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[23]
+                         net (fo=3, routed)           0.245     6.360    double_divider_newton_instance/multiplier_0/product1__4_n_82
+    SLICE_X54Y293        LUT3 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.052     6.412 r  double_divider_newton_instance/multiplier_0/product[66]_i_8/O
+                         net (fo=1, routed)           0.252     6.664    double_divider_newton_instance/multiplier_0/product[66]_i_8_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_DI[1]_CO[7])
+                                                      0.120     6.784 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.810    double_divider_newton_instance/multiplier_0/product_reg[66]_i_1_n_0
+    SLICE_X53Y294        CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.076     6.886 r  double_divider_newton_instance/multiplier_0/product_reg[74]_i_1/O[1]
+                         net (fo=1, routed)           0.025     6.911    double_divider_newton_instance/multiplier_0/product0[68]
+    SLICE_X53Y294        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[68]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.633     7.279    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y294        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[68]/C
+                         clock pessimism             -0.300     6.979    
+                         clock uncertainty           -0.061     6.919    
+    SLICE_X53Y294        FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.025     6.944    double_divider_newton_instance/multiplier_0/product_reg[68]
+  -------------------------------------------------------------------
+                         required time                          6.944    
+                         arrival time                          -6.911    
+  -------------------------------------------------------------------
+                         slack                                  0.033    
+
+Slack (MET) :             0.034ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[63]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        3.998ns  (logic 3.297ns (82.466%)  route 0.701ns (17.534%))
+  Logic Levels:           15  (CARRY8=4 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT2=1)
+  Clock Path Skew:        -0.099ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.067ns = ( 7.234 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.588ns (routing 0.870ns, distribution 0.718ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[2]
+                         net (fo=1, routed)           0.255     6.370    double_divider_newton_instance/multiplier_0/product1__4_n_103
+    SLICE_X53Y290        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.088     6.458 r  double_divider_newton_instance/multiplier_0/product[42]_i_6/O
+                         net (fo=1, routed)           0.025     6.483    double_divider_newton_instance/multiplier_0/product[42]_i_6_n_0
+    SLICE_X53Y290        CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     6.646 r  double_divider_newton_instance/multiplier_0/product_reg[42]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.672    double_divider_newton_instance/multiplier_0/product_reg[42]_i_1_n_0
+    SLICE_X53Y291        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.687 r  double_divider_newton_instance/multiplier_0/product_reg[50]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.713    double_divider_newton_instance/multiplier_0/product_reg[50]_i_1_n_0
+    SLICE_X53Y292        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.728 r  double_divider_newton_instance/multiplier_0/product_reg[58]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.754    double_divider_newton_instance/multiplier_0/product_reg[58]_i_1_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
+                                                      0.086     6.840 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/O[4]
+                         net (fo=1, routed)           0.025     6.865    double_divider_newton_instance/multiplier_0/product0[63]
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[63]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.588     7.234    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[63]/C
+                         clock pessimism             -0.300     6.934    
+                         clock uncertainty           -0.061     6.874    
+    SLICE_X53Y293        FDRE (Setup_EFF_SLICEM_C_D)
+                                                      0.025     6.899    double_divider_newton_instance/multiplier_0/product_reg[63]
+  -------------------------------------------------------------------
+                         required time                          6.899    
+                         arrival time                          -6.865    
+  -------------------------------------------------------------------
+                         slack                                  0.034    
+
+Slack (MET) :             0.036ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[51]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[84]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.195ns  (logic 3.287ns (78.355%)  route 0.908ns (21.645%))
+  Logic Levels:           14  (CARRY8=3 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT6=1)
+  Clock Path Skew:        0.100ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.257ns = ( 7.424 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.857ns
+    Clock Pessimism Removal (CPR):    -0.301ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.799ns (routing 0.957ns, distribution 0.842ns)
+  Clock Net Delay (Destination): 1.778ns (routing 0.870ns, distribution 0.908ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.799     2.857    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X56Y287        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[51]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y287        FDRE (Prop_CFF2_SLICEM_C_Q)
+                                                      0.077     2.934 f  double_divider_newton_instance/multiplier_0/b_m_reg[51]/Q
+                         net (fo=8, routed)           0.334     3.268    double_divider_newton_instance/multiplier_0/product1/A[17]
+    DSP48E2_X5Y117       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[17]_A2_DATA[17])
+                                                      0.192     3.460 r  double_divider_newton_instance/multiplier_0/product1/DSP_A_B_DATA_INST/A2_DATA[17]
+                         net (fo=1, routed)           0.000     3.460    double_divider_newton_instance/multiplier_0/product1/DSP_A_B_DATA.A2_DATA<17>
+    DSP48E2_X5Y117       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[17]_A2A1[17])
+                                                      0.076     3.536 r  double_divider_newton_instance/multiplier_0/product1/DSP_PREADD_DATA_INST/A2A1[17]
+                         net (fo=1, routed)           0.000     3.536    double_divider_newton_instance/multiplier_0/product1/DSP_PREADD_DATA.A2A1<17>
+    DSP48E2_X5Y117       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[17]_U[37])
+                                                      0.505     4.041 f  double_divider_newton_instance/multiplier_0/product1/DSP_MULTIPLIER_INST/U[37]
+                         net (fo=1, routed)           0.000     4.041    double_divider_newton_instance/multiplier_0/product1/DSP_MULTIPLIER.U<37>
+    DSP48E2_X5Y117       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[37]_U_DATA[37])
+                                                      0.047     4.088 r  double_divider_newton_instance/multiplier_0/product1/DSP_M_DATA_INST/U_DATA[37]
+                         net (fo=1, routed)           0.000     4.088    double_divider_newton_instance/multiplier_0/product1/DSP_M_DATA.U_DATA<37>
+    DSP48E2_X5Y117       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[37]_ALU_OUT[47])
+                                                      0.585     4.673 f  double_divider_newton_instance/multiplier_0/product1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.673    double_divider_newton_instance/multiplier_0/product1/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y117       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.795 r  double_divider_newton_instance/multiplier_0/product1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     4.833    double_divider_newton_instance/multiplier_0/product1__0/PCIN[47]
+    DSP48E2_X5Y118       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.379 f  double_divider_newton_instance/multiplier_0/product1__0/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.379    double_divider_newton_instance/multiplier_0/product1__0/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y118       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.501 r  double_divider_newton_instance/multiplier_0/product1__0/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     5.515    double_divider_newton_instance/multiplier_0/product1__1/PCIN[47]
+    DSP48E2_X5Y119       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[4])
+                                                      0.546     6.061 f  double_divider_newton_instance/multiplier_0/product1__1/DSP_ALU_INST/ALU_OUT[4]
+                         net (fo=1, routed)           0.000     6.061    double_divider_newton_instance/multiplier_0/product1__1/DSP_ALU.ALU_OUT<4>
+    DSP48E2_X5Y119       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[4]_P[4])
+                                                      0.109     6.170 r  double_divider_newton_instance/multiplier_0/product1__1/DSP_OUTPUT_INST/P[4]
+                         net (fo=5, routed)           0.430     6.600    double_divider_newton_instance/multiplier_0/product1__1_n_101
+    SLICE_X53Y294        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.152     6.752 r  double_divider_newton_instance/multiplier_0/product[74]_i_10/O
+                         net (fo=1, routed)           0.015     6.767    double_divider_newton_instance/multiplier_0/product[74]_i_10_n_0
+    SLICE_X53Y294        CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.117     6.884 r  double_divider_newton_instance/multiplier_0/product_reg[74]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.910    double_divider_newton_instance/multiplier_0/product_reg[74]_i_1_n_0
+    SLICE_X53Y295        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.925 r  double_divider_newton_instance/multiplier_0/product_reg[82]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.951    double_divider_newton_instance/multiplier_0/product_reg[82]_i_1_n_0
+    SLICE_X53Y296        CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.076     7.027 r  double_divider_newton_instance/multiplier_0/product_reg[90]_i_1/O[1]
+                         net (fo=1, routed)           0.025     7.052    double_divider_newton_instance/multiplier_0/product0[84]
+    SLICE_X53Y296        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[84]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.778     7.424    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y296        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[84]/C
+                         clock pessimism             -0.301     7.124    
+                         clock uncertainty           -0.061     7.063    
+    SLICE_X53Y296        FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.025     7.088    double_divider_newton_instance/multiplier_0/product_reg[84]
+  -------------------------------------------------------------------
+                         required time                          7.088    
+                         arrival time                          -7.052    
+  -------------------------------------------------------------------
+                         slack                                  0.036    
+
+Slack (MET) :             0.038ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[62]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        3.995ns  (logic 3.293ns (82.428%)  route 0.702ns (17.572%))
+  Logic Levels:           15  (CARRY8=4 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT2=1)
+  Clock Path Skew:        -0.098ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.068ns = ( 7.235 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.589ns (routing 0.870ns, distribution 0.719ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[2]
+                         net (fo=1, routed)           0.255     6.370    double_divider_newton_instance/multiplier_0/product1__4_n_103
+    SLICE_X53Y290        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.088     6.458 r  double_divider_newton_instance/multiplier_0/product[42]_i_6/O
+                         net (fo=1, routed)           0.025     6.483    double_divider_newton_instance/multiplier_0/product[42]_i_6_n_0
+    SLICE_X53Y290        CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     6.646 r  double_divider_newton_instance/multiplier_0/product_reg[42]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.672    double_divider_newton_instance/multiplier_0/product_reg[42]_i_1_n_0
+    SLICE_X53Y291        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.687 r  double_divider_newton_instance/multiplier_0/product_reg[50]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.713    double_divider_newton_instance/multiplier_0/product_reg[50]_i_1_n_0
+    SLICE_X53Y292        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.728 r  double_divider_newton_instance/multiplier_0/product_reg[58]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.754    double_divider_newton_instance/multiplier_0/product_reg[58]_i_1_n_0
+    SLICE_X53Y293        CARRY8 (Prop_CARRY8_SLICEM_CI_O[3])
+                                                      0.082     6.836 r  double_divider_newton_instance/multiplier_0/product_reg[66]_i_1/O[3]
+                         net (fo=1, routed)           0.026     6.862    double_divider_newton_instance/multiplier_0/product0[62]
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[62]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.589     7.235    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y293        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[62]/C
+                         clock pessimism             -0.300     6.935    
+                         clock uncertainty           -0.061     6.875    
+    SLICE_X53Y293        FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.025     6.900    double_divider_newton_instance/multiplier_0/product_reg[62]
+  -------------------------------------------------------------------
+                         required time                          6.900    
+                         arrival time                          -6.862    
+  -------------------------------------------------------------------
+                         slack                                  0.038    
+
+Slack (MET) :             0.040ns  (required time - arrival time)
+  Source:                 double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/product_reg[58]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.167ns  (clk_out1_clk_wiz_0 rise@4.167ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        3.988ns  (logic 3.312ns (83.049%)  route 0.676ns (16.951%))
+  Logic Levels:           14  (CARRY8=3 DSP_A_B_DATA=1 DSP_ALU=3 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=3 DSP_PREADD_DATA=1 LUT2=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.063ns = ( 7.230 - 4.167 ) 
+    Source Clock Delay      (SCD):    2.867ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.099ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.809ns (routing 0.957ns, distribution 0.852ns)
+  Clock Net Delay (Destination): 1.584ns (routing 0.870ns, distribution 0.714ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.809     2.867    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X55Y286        FDRE                                         r  double_divider_newton_instance/multiplier_0/b_m_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y286        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.080     2.947 f  double_divider_newton_instance/multiplier_0/b_m_reg[43]/Q
+                         net (fo=8, routed)           0.266     3.213    double_divider_newton_instance/multiplier_0/product1__2/A[9]
+    DSP48E2_X5Y114       DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[9]_A2_DATA[9])
+                                                      0.192     3.405 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA_INST/A2_DATA[9]
+                         net (fo=1, routed)           0.000     3.405    double_divider_newton_instance/multiplier_0/product1__2/DSP_A_B_DATA.A2_DATA<9>
+    DSP48E2_X5Y114       DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[9]_A2A1[9])
+                                                      0.076     3.481 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA_INST/A2A1[9]
+                         net (fo=1, routed)           0.000     3.481    double_divider_newton_instance/multiplier_0/product1__2/DSP_PREADD_DATA.A2A1<9>
+    DSP48E2_X5Y114       DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[9]_U[30])
+                                                      0.505     3.986 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER_INST/U[30]
+                         net (fo=1, routed)           0.000     3.986    double_divider_newton_instance/multiplier_0/product1__2/DSP_MULTIPLIER.U<30>
+    DSP48E2_X5Y114       DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[30]_U_DATA[30])
+                                                      0.047     4.033 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA_INST/U_DATA[30]
+                         net (fo=1, routed)           0.000     4.033    double_divider_newton_instance/multiplier_0/product1__2/DSP_M_DATA.U_DATA<30>
+    DSP48E2_X5Y114       DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[30]_ALU_OUT[47])
+                                                      0.585     4.618 f  double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     4.618    double_divider_newton_instance/multiplier_0/product1__2/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y114       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     4.740 r  double_divider_newton_instance/multiplier_0/product1__2/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     4.754    double_divider_newton_instance/multiplier_0/product1__3/PCIN[47]
+    DSP48E2_X5Y115       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[47])
+                                                      0.546     5.300 f  double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     5.300    double_divider_newton_instance/multiplier_0/product1__3/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X5Y115       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.422 r  double_divider_newton_instance/multiplier_0/product1__3/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.038     5.460    double_divider_newton_instance/multiplier_0/product1__4/PCIN[47]
+    DSP48E2_X5Y116       DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     6.006 f  double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     6.006    double_divider_newton_instance/multiplier_0/product1__4/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X5Y116       DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     6.115 r  double_divider_newton_instance/multiplier_0/product1__4/DSP_OUTPUT_INST/P[2]
+                         net (fo=1, routed)           0.255     6.370    double_divider_newton_instance/multiplier_0/product1__4_n_103
+    SLICE_X53Y290        LUT2 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.088     6.458 r  double_divider_newton_instance/multiplier_0/product[42]_i_6/O
+                         net (fo=1, routed)           0.025     6.483    double_divider_newton_instance/multiplier_0/product[42]_i_6_n_0
+    SLICE_X53Y290        CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     6.646 r  double_divider_newton_instance/multiplier_0/product_reg[42]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.672    double_divider_newton_instance/multiplier_0/product_reg[42]_i_1_n_0
+    SLICE_X53Y291        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     6.687 r  double_divider_newton_instance/multiplier_0/product_reg[50]_i_1/CO[7]
+                         net (fo=1, routed)           0.026     6.713    double_divider_newton_instance/multiplier_0/product_reg[50]_i_1_n_0
+    SLICE_X53Y292        CARRY8 (Prop_CARRY8_SLICEM_CI_O[7])
+                                                      0.116     6.829 r  double_divider_newton_instance/multiplier_0/product_reg[58]_i_1/O[7]
+                         net (fo=1, routed)           0.026     6.855    double_divider_newton_instance/multiplier_0/product0[58]
+    SLICE_X53Y292        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[58]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      4.167     4.167 r  
+    F11                                               0.000     4.167 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     4.167    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     4.445 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     4.445    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     4.445 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     4.778    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     5.408 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     5.622    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.646 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.584     7.230    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X53Y292        FDRE                                         r  double_divider_newton_instance/multiplier_0/product_reg[58]/C
+                         clock pessimism             -0.300     6.930    
+                         clock uncertainty           -0.061     6.870    
+    SLICE_X53Y292        FDRE (Setup_HFF_SLICEM_C_D)
+                                                      0.025     6.895    double_divider_newton_instance/multiplier_0/product_reg[58]
+  -------------------------------------------------------------------
+                         required time                          6.895    
+                         arrival time                          -6.855    
+  -------------------------------------------------------------------
+                         slack                                  0.040    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.010ns  (arrival time - required time)
+  Source:                 double_sqrt_instance/divider_0/a_m_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_sqrt_instance/divider_0/dividend_reg[73]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.265ns  (logic 0.080ns (30.189%)  route 0.185ns (69.811%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.195ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.970ns
+    Source Clock Delay      (SCD):    3.109ns
+    Clock Pessimism Removal (CPR):    -0.335ns
+  Clock Net Delay (Source):      1.630ns (routing 0.870ns, distribution 0.760ns)
+  Clock Net Delay (Destination): 1.912ns (routing 0.957ns, distribution 0.955ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.630     3.109    double_sqrt_instance/divider_0/clk_out1
+    SLICE_X65Y298        FDRE                                         r  double_sqrt_instance/divider_0/a_m_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y298        FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.058     3.167 r  double_sqrt_instance/divider_0/a_m_reg[17]/Q
+                         net (fo=3, routed)           0.149     3.316    double_sqrt_instance/divider_0/a_m_reg_n_0_[17]
+    SLICE_X64Y300        LUT4 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.022     3.338 r  double_sqrt_instance/divider_0/dividend[73]_i_1/O
+                         net (fo=1, routed)           0.036     3.374    double_sqrt_instance/divider_0/dividend0_in[73]
+    SLICE_X64Y300        FDRE                                         r  double_sqrt_instance/divider_0/dividend_reg[73]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.912     2.970    double_sqrt_instance/divider_0/clk_out1
+    SLICE_X64Y300        FDRE                                         r  double_sqrt_instance/divider_0/dividend_reg[73]/C
+                         clock pessimism              0.335     3.304    
+    SLICE_X64Y300        FDRE (Hold_DFF_SLICEM_C_D)
+                                                      0.060     3.364    double_sqrt_instance/divider_0/dividend_reg[73]
+  -------------------------------------------------------------------
+                         required time                         -3.364    
+                         arrival time                           3.374    
+  -------------------------------------------------------------------
+                         slack                                  0.010    
+
+Slack (MET) :             0.013ns  (arrival time - required time)
+  Source:                 double_sqrt_instance/divider_0/z_m_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_sqrt_instance/divider_0/z_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.188ns  (logic 0.058ns (30.851%)  route 0.130ns (69.149%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.115ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.926ns
+    Source Clock Delay      (SCD):    3.106ns
+    Clock Pessimism Removal (CPR):    -0.296ns
+  Clock Net Delay (Source):      1.627ns (routing 0.870ns, distribution 0.757ns)
+  Clock Net Delay (Destination): 1.868ns (routing 0.957ns, distribution 0.911ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.627     3.106    double_sqrt_instance/divider_0/clk_out1
+    SLICE_X58Y324        FDRE                                         r  double_sqrt_instance/divider_0/z_m_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y324        FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.058     3.164 r  double_sqrt_instance/divider_0/z_m_reg[24]/Q
+                         net (fo=5, routed)           0.130     3.294    double_sqrt_instance/divider_0/z_m_reg_n_0_[24]
+    SLICE_X60Y323        FDRE                                         r  double_sqrt_instance/divider_0/z_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.868     2.926    double_sqrt_instance/divider_0/clk_out1
+    SLICE_X60Y323        FDRE                                         r  double_sqrt_instance/divider_0/z_reg[24]/C
+                         clock pessimism              0.296     3.221    
+    SLICE_X60Y323        FDRE (Hold_FFF_SLICEL_C_D)
+                                                      0.060     3.281    double_sqrt_instance/divider_0/z_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -3.281    
+                         arrival time                           3.294    
+  -------------------------------------------------------------------
+                         slack                                  0.013    
+
+Slack (MET) :             0.014ns  (arrival time - required time)
+  Source:                 single_divider_newton_instance/multiplier_0/z_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            single_divider_newton_instance/multiplier_0/s_output_z_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.190ns  (logic 0.060ns (31.579%)  route 0.130ns (68.421%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.114ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.932ns
+    Source Clock Delay      (SCD):    3.113ns
+    Clock Pessimism Removal (CPR):    -0.296ns
+  Clock Net Delay (Source):      1.634ns (routing 0.870ns, distribution 0.764ns)
+  Clock Net Delay (Destination): 1.874ns (routing 0.957ns, distribution 0.917ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.634     3.113    single_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X56Y349        FDRE                                         r  single_divider_newton_instance/multiplier_0/z_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y349        FDRE (Prop_FFF2_SLICEM_C_Q)
+                                                      0.060     3.173 r  single_divider_newton_instance/multiplier_0/z_reg[6]/Q
+                         net (fo=1, routed)           0.130     3.303    single_divider_newton_instance/multiplier_0/z[6]
+    SLICE_X60Y349        FDRE                                         r  single_divider_newton_instance/multiplier_0/s_output_z_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.874     2.932    single_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X60Y349        FDRE                                         r  single_divider_newton_instance/multiplier_0/s_output_z_reg[6]/C
+                         clock pessimism              0.296     3.227    
+    SLICE_X60Y349        FDRE (Hold_GFF2_SLICEL_C_D)
+                                                      0.062     3.289    single_divider_newton_instance/multiplier_0/s_output_z_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -3.289    
+                         arrival time                           3.303    
+  -------------------------------------------------------------------
+                         slack                                  0.014    
+
+Slack (MET) :             0.016ns  (arrival time - required time)
+  Source:                 double_divider_newton_instance/multiplier_0/s_output_z_reg[44]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/z_reg[44]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.177ns  (logic 0.059ns (33.333%)  route 0.118ns (66.667%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.099ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.884ns
+    Source Clock Delay      (SCD):    3.084ns
+    Clock Pessimism Removal (CPR):    -0.300ns
+  Clock Net Delay (Source):      1.605ns (routing 0.870ns, distribution 0.735ns)
+  Clock Net Delay (Destination): 1.826ns (routing 0.957ns, distribution 0.869ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.605     3.084    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X58Y292        FDRE                                         r  double_divider_newton_instance/multiplier_0/s_output_z_reg[44]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y292        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.059     3.143 r  double_divider_newton_instance/multiplier_0/s_output_z_reg[44]/Q
+                         net (fo=2, routed)           0.118     3.261    double_divider_newton_instance/multiplier_z[44]
+    SLICE_X59Y293        FDRE                                         r  double_divider_newton_instance/z_reg[44]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.826     2.884    double_divider_newton_instance/clk_out1
+    SLICE_X59Y293        FDRE                                         r  double_divider_newton_instance/z_reg[44]/C
+                         clock pessimism              0.300     3.183    
+    SLICE_X59Y293        FDRE (Hold_BFF2_SLICEL_C_D)
+                                                      0.062     3.245    double_divider_newton_instance/z_reg[44]
+  -------------------------------------------------------------------
+                         required time                         -3.245    
+                         arrival time                           3.261    
+  -------------------------------------------------------------------
+                         slack                                  0.016    
+
+Slack (MET) :             0.016ns  (arrival time - required time)
+  Source:                 single_divider_newton_instance/multiplier_a_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            single_divider_newton_instance/multiplier_0/a_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.125ns  (logic 0.059ns (47.200%)  route 0.066ns (52.800%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.047ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.921ns
+    Source Clock Delay      (SCD):    3.120ns
+    Clock Pessimism Removal (CPR):    -0.247ns
+  Clock Net Delay (Source):      1.641ns (routing 0.870ns, distribution 0.771ns)
+  Clock Net Delay (Destination): 1.863ns (routing 0.957ns, distribution 0.906ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.641     3.120    single_divider_newton_instance/clk_out1
+    SLICE_X58Y344        FDRE                                         r  single_divider_newton_instance/multiplier_a_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y344        FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.059     3.179 r  single_divider_newton_instance/multiplier_a_reg[22]/Q
+                         net (fo=1, routed)           0.066     3.245    single_divider_newton_instance/multiplier_0/a_reg[31]_0[22]
+    SLICE_X58Y345        FDRE                                         r  single_divider_newton_instance/multiplier_0/a_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.863     2.921    single_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X58Y345        FDRE                                         r  single_divider_newton_instance/multiplier_0/a_reg[22]/C
+                         clock pessimism              0.247     3.167    
+    SLICE_X58Y345        FDRE (Hold_AFF2_SLICEL_C_D)
+                                                      0.062     3.229    single_divider_newton_instance/multiplier_0/a_reg[22]
+  -------------------------------------------------------------------
+                         required time                         -3.229    
+                         arrival time                           3.245    
+  -------------------------------------------------------------------
+                         slack                                  0.016    
+
+Slack (MET) :             0.017ns  (arrival time - required time)
+  Source:                 single_sqrt_instance/adder_a_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            single_sqrt_instance/adder_0/a_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.170ns  (logic 0.059ns (34.706%)  route 0.111ns (65.294%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.091ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.906ns
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    -0.296ns
+  Clock Net Delay (Source):      1.631ns (routing 0.870ns, distribution 0.761ns)
+  Clock Net Delay (Destination): 1.848ns (routing 0.957ns, distribution 0.891ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.631     3.110    single_sqrt_instance/clk_out1
+    SLICE_X58Y329        FDRE                                         r  single_sqrt_instance/adder_a_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y329        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.059     3.169 r  single_sqrt_instance/adder_a_reg[12]/Q
+                         net (fo=1, routed)           0.111     3.280    single_sqrt_instance/adder_0/a_reg[31]_0[12]
+    SLICE_X59Y329        FDRE                                         r  single_sqrt_instance/adder_0/a_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.848     2.906    single_sqrt_instance/adder_0/clk_out1
+    SLICE_X59Y329        FDRE                                         r  single_sqrt_instance/adder_0/a_reg[12]/C
+                         clock pessimism              0.296     3.201    
+    SLICE_X59Y329        FDRE (Hold_EFF2_SLICEL_C_D)
+                                                      0.062     3.263    single_sqrt_instance/adder_0/a_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -3.263    
+                         arrival time                           3.280    
+  -------------------------------------------------------------------
+                         slack                                  0.017    
+
+Slack (MET) :             0.019ns  (arrival time - required time)
+  Source:                 double_divider_newton_instance/multiplier_0/z_reg[60]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_divider_newton_instance/multiplier_0/s_output_z_reg[60]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.132ns  (logic 0.059ns (44.697%)  route 0.073ns (55.303%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.051ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.887ns
+    Source Clock Delay      (SCD):    3.085ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Net Delay (Source):      1.606ns (routing 0.870ns, distribution 0.736ns)
+  Clock Net Delay (Destination): 1.829ns (routing 0.957ns, distribution 0.872ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.606     3.085    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X59Y289        FDSE                                         r  double_divider_newton_instance/multiplier_0/z_reg[60]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y289        FDSE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.059     3.144 r  double_divider_newton_instance/multiplier_0/z_reg[60]/Q
+                         net (fo=1, routed)           0.073     3.217    double_divider_newton_instance/multiplier_0/z[60]
+    SLICE_X59Y288        FDRE                                         r  double_divider_newton_instance/multiplier_0/s_output_z_reg[60]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.829     2.887    double_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X59Y288        FDRE                                         r  double_divider_newton_instance/multiplier_0/s_output_z_reg[60]/C
+                         clock pessimism              0.250     3.136    
+    SLICE_X59Y288        FDRE (Hold_GFF2_SLICEL_C_D)
+                                                      0.062     3.198    double_divider_newton_instance/multiplier_0/s_output_z_reg[60]
+  -------------------------------------------------------------------
+                         required time                         -3.198    
+                         arrival time                           3.217    
+  -------------------------------------------------------------------
+                         slack                                  0.019    
+
+Slack (MET) :             0.019ns  (arrival time - required time)
+  Source:                 single_sqrt_instance/sqrt_n_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            single_sqrt_instance/divider_b_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.128ns  (logic 0.058ns (45.312%)  route 0.070ns (54.687%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.047ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.921ns
+    Source Clock Delay      (SCD):    3.119ns
+    Clock Pessimism Removal (CPR):    -0.246ns
+  Clock Net Delay (Source):      1.640ns (routing 0.870ns, distribution 0.770ns)
+  Clock Net Delay (Destination): 1.863ns (routing 0.957ns, distribution 0.906ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.640     3.119    single_sqrt_instance/clk_out1
+    SLICE_X59Y338        FDRE                                         r  single_sqrt_instance/sqrt_n_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y338        FDRE (Prop_FFF_SLICEL_C_Q)
+                                                      0.058     3.177 r  single_sqrt_instance/sqrt_n_reg[30]/Q
+                         net (fo=3, routed)           0.070     3.247    single_sqrt_instance/sqrt_n[30]
+    SLICE_X59Y337        FDRE                                         r  single_sqrt_instance/divider_b_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.863     2.921    single_sqrt_instance/clk_out1
+    SLICE_X59Y337        FDRE                                         r  single_sqrt_instance/divider_b_reg[30]/C
+                         clock pessimism              0.246     3.166    
+    SLICE_X59Y337        FDRE (Hold_GFF2_SLICEL_C_D)
+                                                      0.062     3.228    single_sqrt_instance/divider_b_reg[30]
+  -------------------------------------------------------------------
+                         required time                         -3.228    
+                         arrival time                           3.247    
+  -------------------------------------------------------------------
+                         slack                                  0.019    
+
+Slack (MET) :             0.021ns  (arrival time - required time)
+  Source:                 double_sqrt_instance/adder_a_reg[62]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            double_sqrt_instance/adder_0/a_reg[62]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.132ns  (logic 0.059ns (44.697%)  route 0.073ns (55.303%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.049ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.933ns
+    Source Clock Delay      (SCD):    3.127ns
+    Clock Pessimism Removal (CPR):    -0.244ns
+  Clock Net Delay (Source):      1.648ns (routing 0.870ns, distribution 0.778ns)
+  Clock Net Delay (Destination): 1.875ns (routing 0.957ns, distribution 0.918ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.648     3.127    double_sqrt_instance/clk_out1
+    SLICE_X60Y317        FDRE                                         r  double_sqrt_instance/adder_a_reg[62]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y317        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.059     3.186 r  double_sqrt_instance/adder_a_reg[62]/Q
+                         net (fo=1, routed)           0.073     3.259    double_sqrt_instance/adder_0/a_reg[63]_0[62]
+    SLICE_X60Y316        FDRE                                         r  double_sqrt_instance/adder_0/a_reg[62]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.875     2.933    double_sqrt_instance/adder_0/clk_out1
+    SLICE_X60Y316        FDRE                                         r  double_sqrt_instance/adder_0/a_reg[62]/C
+                         clock pessimism              0.244     3.176    
+    SLICE_X60Y316        FDRE (Hold_FFF2_SLICEL_C_D)
+                                                      0.062     3.238    double_sqrt_instance/adder_0/a_reg[62]
+  -------------------------------------------------------------------
+                         required time                         -3.238    
+                         arrival time                           3.259    
+  -------------------------------------------------------------------
+                         slack                                  0.021    
+
+Slack (MET) :             0.021ns  (arrival time - required time)
+  Source:                 single_divider_newton_instance/multiplier_a_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Destination:            single_divider_newton_instance/multiplier_0/a_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@2.083ns period=4.167ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.130ns  (logic 0.059ns (45.385%)  route 0.071ns (54.615%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.047ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.921ns
+    Source Clock Delay      (SCD):    3.120ns
+    Clock Pessimism Removal (CPR):    -0.247ns
+  Clock Net Delay (Source):      1.641ns (routing 0.870ns, distribution 0.771ns)
+  Clock Net Delay (Destination): 1.863ns (routing 0.957ns, distribution 0.906ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.278     0.278 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.278    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.278 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     0.611    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.241 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.214     1.455    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.479 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.641     3.120    single_divider_newton_instance/clk_out1
+    SLICE_X58Y344        FDRE                                         r  single_divider_newton_instance/multiplier_a_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y344        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.059     3.179 r  single_divider_newton_instance/multiplier_a_reg[19]/Q
+                         net (fo=1, routed)           0.071     3.250    single_divider_newton_instance/multiplier_0/a_reg[31]_0[19]
+    SLICE_X58Y345        FDRE                                         r  single_divider_newton_instance/multiplier_0/a_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    F11                                               0.000     0.000 r  fpga_clk (IN)
+                         net (fo=0)                   0.000     0.000    instance_name/inst/clkin1_ibuf/I
+    F11                  INBUF (Prop_INBUF_HPIOB_M_PAD_O)
+                                                      0.529     0.529 r  instance_name/inst/clkin1_ibuf/INBUF_INST/O
+                         net (fo=1, routed)           0.000     0.529    instance_name/inst/clkin1_ibuf/OUT
+    F11                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.529 r  instance_name/inst/clkin1_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     0.913    instance_name/inst/clk_in1_clk_wiz_0
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     0.786 r  instance_name/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.244     1.030    instance_name/inst/clk_out1_clk_wiz_0
+    BUFGCE_X1Y122        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.058 r  instance_name/inst/clkout1_buf/O
+    X1Y4 (CLOCK_ROOT)    net (fo=5680, routed)        1.863     2.921    single_divider_newton_instance/multiplier_0/clk_out1
+    SLICE_X58Y345        FDRE                                         r  single_divider_newton_instance/multiplier_0/a_reg[19]/C
+                         clock pessimism              0.247     3.167    
+    SLICE_X58Y345        FDRE (Hold_CFF2_SLICEL_C_D)
+                                                      0.062     3.229    single_divider_newton_instance/multiplier_0/a_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -3.229    
+                         arrival time                           3.250    
+  -------------------------------------------------------------------
+                         slack                                  0.021    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_clk_wiz_0
+Waveform(ns):       { 0.000 2.083 }
+Period(ns):         4.167
+Sources:            { instance_name/inst/mmcme4_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFGCE/I            n/a            1.290         4.167       2.877      BUFGCE_X1Y122   instance_name/inst/clkout1_buf/I
+Min Period        n/a     MMCME4_ADV/CLKOUT0  n/a            1.071         4.167       3.096      MMCM_X1Y5       instance_name/inst/mmcme4_adv_inst/CLKOUT0
+Min Period        n/a     DSP_OUTPUT/CLK      n/a            0.650         4.167       3.517      DSP48E2_X5Y139  single_divider_newton_instance/multiplier_0/product1__0/DSP_OUTPUT_INST/CLK
+Min Period        n/a     FDPE/C              n/a            0.550         4.167       3.617      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            0.550         4.167       3.617      SLICE_X61Y318   Controller_unit_instance/FSM_onehot_ps_reg[1]/C
+Min Period        n/a     FDCE/C              n/a            0.550         4.167       3.617      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[2]/C
+Min Period        n/a     FDCE/C              n/a            0.550         4.167       3.617      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[3]/C
+Min Period        n/a     FDCE/C              n/a            0.550         4.167       3.617      SLICE_X61Y315   Controller_unit_instance/FSM_onehot_ps_reg[4]/C
+Min Period        n/a     FDCE/C              n/a            0.550         4.167       3.617      SLICE_X61Y315   Controller_unit_instance/FSM_onehot_ps_reg[5]/C
+Min Period        n/a     FDCE/C              n/a            0.550         4.167       3.617      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[6]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X65Y308   double_sqrt_instance/divider_0/dividend_reg[56]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X65Y307   double_sqrt_instance/divider_0/dividend_reg[59]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X58Y328   single_sqrt_instance/adder_a_reg[5]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X58Y328   single_sqrt_instance/adder_a_reg[7]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X65Y306   double_sqrt_instance/divider_0/dividend_reg[91]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X65Y306   double_sqrt_instance/divider_0/dividend_reg[92]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X65Y306   double_sqrt_instance/divider_0/dividend_reg[93]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X65Y306   double_sqrt_instance/divider_0/dividend_reg[94]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X60Y301   double_sqrt_instance/divider_0/divisor_reg[13]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.275         2.083       1.808      SLICE_X60Y303   double_sqrt_instance/divider_0/divisor_reg[19]/C
+High Pulse Width  Slow    FDPE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[0]/C
+High Pulse Width  Fast    FDPE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[2]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[2]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[3]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[3]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y315   Controller_unit_instance/FSM_onehot_ps_reg[4]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y315   Controller_unit_instance/FSM_onehot_ps_reg[5]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[6]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.275         2.083       1.808      SLICE_X61Y317   Controller_unit_instance/FSM_onehot_ps_reg[6]/C
+
+
+

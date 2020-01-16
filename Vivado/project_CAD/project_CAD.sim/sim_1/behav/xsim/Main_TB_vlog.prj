@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project_CAD.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../../../ModelSim/Main.v" \
+"../../../../../../ModelSim/double_adder.v" \
+"../../../../../../ModelSim/double_divider.v" \
+"../../../../../../ModelSim/double_divider_newton.v" \
+"../../../../../../ModelSim/double_multiplier.v" \
+"../../../../../../ModelSim/double_sqrt.v" \
+"../../../../../../ModelSim/single_adder.v" \
+"../../../../../../ModelSim/single_divider.v" \
+"../../../../../../ModelSim/single_divider_newton.v" \
+"../../../../../../ModelSim/single_multiplier.v" \
+"../../../../../../ModelSim/single_sqrt.v" \
+"../../../../../../ModelSim/Main_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
