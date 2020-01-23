@@ -17,7 +17,7 @@ module Main_vivado_TB();
   
   integer fd;
   
-  always #5 clk = ~clk;  // 50MHz
+  always #5 clk = ~clk;  // 100MHz
   
   Main_vivado main_vivado(
         .input_as(a_single),
