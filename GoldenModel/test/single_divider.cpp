@@ -54,7 +54,7 @@ int main()
         cout << "CPP CODE : " << intToBinary(*(int*)&input1) << "/" << intToBinary(*(int*)&(input2)) << " = " << intToBinary(*(int*)&(divideResult)) << endl;
         cout << "FLOAT VAL: " << input1 << "/" << input2 << " = " << output << "|" << divideResult << endl;
 
-        if(*(int*)&(divideResult) == *(int*)&(output))
+        if(*(int*)&(divideResult) == *(int*)&(output) || (isnan(output) && isnan(divideResult)))
         {
             cout << "OK" << endl;
         }

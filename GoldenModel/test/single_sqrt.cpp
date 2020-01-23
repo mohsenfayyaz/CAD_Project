@@ -62,7 +62,7 @@ int main()
         cout << "CPP CODE : " << intToBinary(*(int*)&input) << "|" << intToBinary(*(int*)&(sqrtInput)) << endl;
         cout << "FLOAT VAL: " << input << "|" << output << "|" << sqrtInput << endl;
 
-        if(*(int*)&(sqrtInput) == *(int*)&(output))
+        if(*(int*)&(sqrtInput) == *(int*)&(output) || (isnan(output) && isnan(sqrtInput)))
         {
             cout << "OK" << endl;
         }

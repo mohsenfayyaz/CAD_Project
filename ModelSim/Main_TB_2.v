@@ -1,4 +1,4 @@
-//IEEE Floating Point Integration Test
+//IEEE Floating Point Integration Test (Random Testing)
 //Copyright (C) Mohsen Fayyaz 2019 "mohsenfayyaz.ir"
 //2019-1-15
 //

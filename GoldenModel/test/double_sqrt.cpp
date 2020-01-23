@@ -86,7 +86,7 @@ int main()
         cout << "CPP CODE : " << intToBinary(*(unsigned long long*)&input, 64) << "|" << intToBinary(*(unsigned long long*)&(sqrtInput), 64) << endl;
         cout << "DOUBLE VAL: " << input << "|" << output << "|" << sqrtInput << endl;
 
-        if(*(long int*)&(sqrtInput) == *(long int*)&(output))
+        if(*(long int*)&(sqrtInput) == *(long int*)&(output)  || (isnan(output) && isnan(sqrtInput)))
         {
             cout << "OK" << endl;
         }

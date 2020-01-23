@@ -2,7 +2,7 @@
 //Copyright (C) Mohsen Fayyaz 2019 "mohsenfayyaz.ir"
 //2019-1-15
 //
-
+`timescale 1ns/1ns 
 `include "defines.v"
 
 module Main_TB_2();
@@ -62,7 +62,8 @@ module Main_TB_2();
     # 100;
     end
     $fclose(fd);  
-    $display("File Created: %s", `SINGLE_DIVIDER_OUTPUT_FILE_NAME)
+    $display("File Created: %s", `SINGLE_DIVIDER_OUTPUT_FILE_NAME);
+    
     
     process = `PROCESS_SINGLE_SQRT;
     fd = $fopen(`SINGLE_SQRT_OUTPUT_FILE_NAME,"w");
@@ -84,7 +85,8 @@ module Main_TB_2();
     # 100;
     end
     $fclose(fd);  
-    $display("File Created: %s", `SINGLE_SQRT_OUTPUT_FILE_NAME)
+    $display("File Created: %s", `SINGLE_SQRT_OUTPUT_FILE_NAME);
+    
     
     process = `PROCESS_DOUBLE_DIVIDER;
     fd = $fopen(`DOUBLE_DIVIDER_OUTPUT_FILE_NAME,"w");
@@ -112,7 +114,8 @@ module Main_TB_2();
     # 100;
     end
     $fclose(fd);  
-    $display("File Created: %s", `DOUBLE_DIVIDER_OUTPUT_FILE_NAME)
+    $display("File Created: %s", `DOUBLE_DIVIDER_OUTPUT_FILE_NAME);
+    
     
     process = `PROCESS_DOUBLE_SQRT;
     fd = $fopen(`DOUBLE_SQRT_OUTPUT_FILE_NAME,"w");
@@ -135,7 +138,7 @@ module Main_TB_2();
     # 100;
     end
     $fclose(fd);
-    $display("File Created: %s", `DOUBLE_SQRT_OUTPUT_FILE_NAME)
+    $display("File Created: %s", `DOUBLE_SQRT_OUTPUT_FILE_NAME);
     
     
     $stop;
